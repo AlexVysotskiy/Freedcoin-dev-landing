@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>FREED</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+
     <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link href="css/webflow.css" rel="stylesheet" type="text/css">
     <link href="css/freed-0e0411.webflow.css" rel="stylesheet" type="text/css">
@@ -13,10 +13,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js" type="text/javascript"></script>
     <script type="text/javascript">WebFont.load({
-            google: {
-                families: ["Roboto:300,regular,500"]
-            }
-        });</script>
+        google: {
+            families: ["Roboto:300,regular,500"]
+        }
+    });</script>
 
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
@@ -150,6 +150,7 @@
         <div class="w-row step step-1">
 
             <div class="w-container">
+
                 <div class="name">
                     Шаг №1
                 </div>
@@ -168,11 +169,16 @@
                     При очередном обновлении игры в игре<br/>
                     появляется специальный раздел, в котором можно<br/>
                     управлять вычислениями и настраивать агент<br/>
-                    <a href="#">Посмотреть пример...</a>
+                    <a href="https://freedcoin.io/">Посмотреть пример...</a>
+                </div>
+
+                <div class="bg-img-holder">
+                    <img src="images/step-1-bg.svg"/>
                 </div>
             </div>
 
         </div>
+
         <div class="w-row step step-2">
 
             <div class="w-container">
@@ -194,6 +200,10 @@
                 <div class="text no-4">
                     FREED использует компьютеры игроков не ради майнинга.<br/>
                     FREED - это платформа высокопроизводительных вычислений<br/>компании TVX Games
+                </div>
+
+                <div class="bg-img-holder">
+                    <img src="images/step-2-bg.svg"/>
                 </div>
             </div>
 
@@ -223,6 +233,10 @@
                     Владельцы игры устанавливают выгодный курс приема токенов,<br/>
                     чтобы игроку доставалось больше ценностей и<br/>
                     игроки были мотивированы участвовать в системе
+                </div>
+
+                <div class="bg-img-holder">
+                    <img src="images/step-3-bg.svg"/>
                 </div>
             </div>
 
@@ -264,7 +278,7 @@
             </h3>
 
             <div class="center section-subheading">
-                <a href="#" class="button-golden">
+                <a href="#" class="button-golden register-button">
                     Регистрация
                 </a>
             </div>
@@ -323,18 +337,22 @@
             </div>
             <div class=" w-col w-col-1">
             </div>
+            <div class=" w-col w-col-1">
+                <img src="images/tvx_games.png" style="margin-top: -7px;"/>
+            </div>
+
             <div class="w-col w-col-2">
-                <a href="#">
+                <a href="http://tvxgames.com/">
                     Проект компании<br/>TVX Games
                 </a>
             </div>
             <div class="w-col w-col-2 pull-center">
-                <a href="#">
+                <a href="http://tvxgames.com/jobs/">
                     Вакансии
                 </a>
             </div>
             <div class="w-col w-col-2">
-                <a href="#">
+                <a href="http://tvxgames.com/company/">
                     О компании
                 </a>
             </div>
@@ -344,7 +362,135 @@
 
 <a href="#" class="scrollup">Наверх</a>
 
-<script type="text/javascript" src="js/nav.js"></script>
+<div class="modal-block">
+
+    <div class="modal-holder buypopup">
+
+        <div class="buypopup buypopup-main register-block rounded-shadowed-box ">
+
+            <a href="#" class="buyclose">Close</a>
+
+            <div class="title">
+                Зарегистрируйтесь как партнер - разработчик игр и получите первым<br/>
+                доступ к SDK и ряд других стартовых преимуществ:
+            </div>
+
+            <script>
+                $(document).ready(function(){
+                    $('.buy-form').on('submit', function(){
+                        return false;
+                    });
+                });
+            </script>
+
+            <form class="buy-form" action="form2.php" method="POST" onsubmit="return sendBuyForm();">
+
+                <div class="form-group">
+                    <label>Название компании</label>
+                    <input type="text" name="company-name">
+                </div>
+
+                <div class="form-group">
+                    <label>Веб-сайт</label>
+                    <input type="text" name="site">
+                </div>
+
+                <div class="form-group">
+                    <label>Укажите название хотя бы одной игры, в которой вы хотели бы использовать FREED</label>
+                    <input type="text" name="game-list">
+                </div>
+
+                <div class="form-group">
+                    <label>Веб-сайт игры</label>
+                    <input type="text" name="game-site">
+                </div>
+
+                <div class="form-group">
+
+                    <label>Укажите тип игры</label>
+
+                    <br/>
+                    <div class="w-row">
+
+                        <div class="w-col w-col-4 radio-styled">
+                            <input id="type-1" name="game-type" type="radio" value="Мобильная">
+                            <label for="type-1" class="radio-label">Мобильная</label>
+                        </div>
+
+                        <div class=" w-col w-col-2 radio-styled">
+                            <input id="type-2" name="game-type" type="radio" value="PC">
+                            <label for="type-2" class="radio-label">PC</label>
+                        </div>
+
+                        <div class=" w-col w-col-5 radio-styled">
+                            <input id="type-3" name="game-type" type="radio" value="Кросс-платформенная">
+                            <label for="type-3" class="radio-label">Кросс-платформенная</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label>Оценочная аудитория игры, MAU</label>
+                    <input type="text" name="mau">
+                </div>
+
+                <div class="form-group">
+                    <label>Имя контактного лица</label>
+                    <input type="text" name="contact-name">
+                </div>
+
+                <div class="form-group">
+                    <label>Профиль контактного лица</label>
+                    <div class="w-row">
+
+                        <div class="w-col w-col-3 radio-styled">
+                            <input id="profile-1" name="profile-type" type="radio" value="Разработчик">
+                            <label for="profile-1" class="radio-label">Разработчик</label>
+                        </div>
+
+                        <div class=" w-col w-col-3 radio-styled">
+                            <input id="profile-2" name="profile-type" type="radio" value="Совладелец">
+                            <label for="profile-2" class="radio-label">Совладелец</label>
+                        </div>
+
+                        <div class=" w-col w-col-5 radio-styled">
+                            <input id="profile-3" name="profile-type" type="radio" value="Менеджер по маркетингу">
+                            <label for="profile-3" class="radio-label">Менеджер по маркетингу</label>
+                        </div>
+
+                        <div class=" w-col w-col-3 radio-styled">
+                            <input id="profile-4" name="profile-type" type="radio" value="Другое">
+                            <label for="profile-4" class="radio-label">Другое</label>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>E-mail или телефон</label>
+                    <input type="text" name="contact-info">
+                </div>
+
+                <div class="text-center w-clearfix">
+                    <input type="submit" value="Отправить">
+                </div>
+
+            </form>
+
+            <div class="form-message-buy" style="display: none">
+                Спасибо!
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="buypopup buypopup-bg buyclose"></div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
 <script src="js/jquery.countdown.js" type="text/javascript"></script>
 <script src="js/coins_config.js" type="text/javascript"></script>
