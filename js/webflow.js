@@ -5092,7 +5092,7 @@ function sendBuyForm() {
         var val = $(this).val().trim();
         if (val.length == 0)
         {
-            // $(this).addClass('error');
+            $(this).addClass('error');
         }
     });
 
@@ -5113,7 +5113,7 @@ function sendBuyForm() {
     $('.form-message-buy').slideDown();
 
     setTimeout(function () {
-        
+
         $form.trigger('resetSubmit');
         $('.buyclose').click();
     }, 3000);
