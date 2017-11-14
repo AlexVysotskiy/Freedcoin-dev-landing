@@ -383,7 +383,7 @@
                 });
             </script>
 
-            <form class="buy-form" action="form2.php" method="POST" onsubmit="return sendBuyForm();">
+            <form class="buy-form" onsubmit="return sendBuyForm();">
 
                 <div class="form-group">
                     <label>Название компании</label>
@@ -413,7 +413,7 @@
                     <div class="w-row">
 
                         <div class="w-col w-col-4 radio-styled">
-                            <input id="type-1" name="game-type" type="radio" value="Мобильная">
+                            <input id="type-1" name="game-type" type="radio" value="Мобильная" checked>
                             <label for="type-1" class="radio-label">Мобильная</label>
                         </div>
 
@@ -446,7 +446,7 @@
                     <div class="w-row">
 
                         <div class="w-col w-col-3 radio-styled">
-                            <input id="profile-1" name="profile-type" type="radio" value="Разработчик">
+                            <input id="profile-1" name="profile-type" type="radio" value="Разработчик" checked>
                             <label for="profile-1" class="radio-label">Разработчик</label>
                         </div>
 
@@ -464,7 +464,6 @@
                             <input id="profile-4" name="profile-type" type="radio" value="Другое">
                             <label for="profile-4" class="radio-label">Другое</label>
                         </div>
-
 
                     </div>
                 </div>

@@ -51,7 +51,8 @@
         }
 
         function i(a, b, c) {
-            if (void 0 !== b && (c = b), void 0 === a)return c;
+            if (void 0 !== b && (c = b), void 0 === a)
+                return c;
             var d = c;
             return $.test(a) || !_.test(a) ? d = parseInt(a, 10) : _.test(a) && (d = 1e3 * parseFloat(a)), 0 > d && (d = 0), d === d ? d : c
         }
@@ -61,7 +62,7 @@
         }
 
         function k(a) {
-            for (var b = -1, c = a ? a.length : 0, d = []; ++b < c;) {
+            for (var b = -1, c = a ? a.length : 0, d = []; ++b < c; ) {
                 var e = a[b];
                 e && d.push(e)
             }
@@ -94,7 +95,9 @@
                 return n.constructor = j, j.mixin = function (b) {
                     return k[a] = j[a] = g(j, b)[a], j
                 }, j.open = function (a) {
-                    if (l = {}, e(a) ? l = a.call(j, n, m, j, h) : d(a) && (l = a), d(l))for (var c in l)b.call(l, c) && (n[c] = l[c]);
+                    if (l = {}, e(a) ? l = a.call(j, n, m, j, h) : d(a) && (l = a), d(l))
+                        for (var c in l)
+                            b.call(l, c) && (n[c] = l[c]);
                     return e(n.init) || (n.init = h), j
                 }, j.open(i)
             }
@@ -102,77 +105,81 @@
             return g
         }("prototype", {}.hasOwnProperty), m = {
             ease: ["ease", function (a, b, c, d) {
-                var e = (a /= d) * a, f = e * a;
-                return b + c * (-2.75 * f * e + 11 * e * e + -15.5 * f + 8 * e + .25 * a)
-            }], "ease-in": ["ease-in", function (a, b, c, d) {
-                var e = (a /= d) * a, f = e * a;
-                return b + c * (-1 * f * e + 3 * e * e + -3 * f + 2 * e)
-            }], "ease-out": ["ease-out", function (a, b, c, d) {
-                var e = (a /= d) * a, f = e * a;
-                return b + c * (.3 * f * e + -1.6 * e * e + 2.2 * f + -1.8 * e + 1.9 * a)
-            }], "ease-in-out": ["ease-in-out", function (a, b, c, d) {
-                var e = (a /= d) * a, f = e * a;
-                return b + c * (2 * f * e + -5 * e * e + 2 * f + 2 * e)
-            }], linear: ["linear", function (a, b, c, d) {
-                return c * a / d + b
-            }], "ease-in-quad": ["cubic-bezier(0.550, 0.085, 0.680, 0.530)", function (a, b, c, d) {
-                return c * (a /= d) * a + b
-            }], "ease-out-quad": ["cubic-bezier(0.250, 0.460, 0.450, 0.940)", function (a, b, c, d) {
-                return -c * (a /= d) * (a - 2) + b
-            }], "ease-in-out-quad": ["cubic-bezier(0.455, 0.030, 0.515, 0.955)", function (a, b, c, d) {
-                return (a /= d / 2) < 1 ? c / 2 * a * a + b : -c / 2 * (--a * (a - 2) - 1) + b
-            }], "ease-in-cubic": ["cubic-bezier(0.550, 0.055, 0.675, 0.190)", function (a, b, c, d) {
-                return c * (a /= d) * a * a + b
-            }], "ease-out-cubic": ["cubic-bezier(0.215, 0.610, 0.355, 1)", function (a, b, c, d) {
-                return c * ((a = a / d - 1) * a * a + 1) + b
-            }], "ease-in-out-cubic": ["cubic-bezier(0.645, 0.045, 0.355, 1)", function (a, b, c, d) {
-                return (a /= d / 2) < 1 ? c / 2 * a * a * a + b : c / 2 * ((a -= 2) * a * a + 2) + b
-            }], "ease-in-quart": ["cubic-bezier(0.895, 0.030, 0.685, 0.220)", function (a, b, c, d) {
-                return c * (a /= d) * a * a * a + b
-            }], "ease-out-quart": ["cubic-bezier(0.165, 0.840, 0.440, 1)", function (a, b, c, d) {
-                return -c * ((a = a / d - 1) * a * a * a - 1) + b
-            }], "ease-in-out-quart": ["cubic-bezier(0.770, 0, 0.175, 1)", function (a, b, c, d) {
-                return (a /= d / 2) < 1 ? c / 2 * a * a * a * a + b : -c / 2 * ((a -= 2) * a * a * a - 2) + b
-            }], "ease-in-quint": ["cubic-bezier(0.755, 0.050, 0.855, 0.060)", function (a, b, c, d) {
-                return c * (a /= d) * a * a * a * a + b
-            }], "ease-out-quint": ["cubic-bezier(0.230, 1, 0.320, 1)", function (a, b, c, d) {
-                return c * ((a = a / d - 1) * a * a * a * a + 1) + b
-            }], "ease-in-out-quint": ["cubic-bezier(0.860, 0, 0.070, 1)", function (a, b, c, d) {
-                return (a /= d / 2) < 1 ? c / 2 * a * a * a * a * a + b : c / 2 * ((a -= 2) * a * a * a * a + 2) + b
-            }], "ease-in-sine": ["cubic-bezier(0.470, 0, 0.745, 0.715)", function (a, b, c, d) {
-                return -c * Math.cos(a / d * (Math.PI / 2)) + c + b
-            }], "ease-out-sine": ["cubic-bezier(0.390, 0.575, 0.565, 1)", function (a, b, c, d) {
-                return c * Math.sin(a / d * (Math.PI / 2)) + b
-            }], "ease-in-out-sine": ["cubic-bezier(0.445, 0.050, 0.550, 0.950)", function (a, b, c, d) {
-                return -c / 2 * (Math.cos(Math.PI * a / d) - 1) + b
-            }], "ease-in-expo": ["cubic-bezier(0.950, 0.050, 0.795, 0.035)", function (a, b, c, d) {
-                return 0 === a ? b : c * Math.pow(2, 10 * (a / d - 1)) + b
-            }], "ease-out-expo": ["cubic-bezier(0.190, 1, 0.220, 1)", function (a, b, c, d) {
-                return a === d ? b + c : c * (-Math.pow(2, -10 * a / d) + 1) + b
-            }], "ease-in-out-expo": ["cubic-bezier(1, 0, 0, 1)", function (a, b, c, d) {
-                return 0 === a ? b : a === d ? b + c : (a /= d / 2) < 1 ? c / 2 * Math.pow(2, 10 * (a - 1)) + b : c / 2 * (-Math.pow(2, -10 * --a) + 2) + b
-            }], "ease-in-circ": ["cubic-bezier(0.600, 0.040, 0.980, 0.335)", function (a, b, c, d) {
-                return -c * (Math.sqrt(1 - (a /= d) * a) - 1) + b
-            }], "ease-out-circ": ["cubic-bezier(0.075, 0.820, 0.165, 1)", function (a, b, c, d) {
-                return c * Math.sqrt(1 - (a = a / d - 1) * a) + b
-            }], "ease-in-out-circ": ["cubic-bezier(0.785, 0.135, 0.150, 0.860)", function (a, b, c, d) {
-                return (a /= d / 2) < 1 ? -c / 2 * (Math.sqrt(1 - a * a) - 1) + b : c / 2 * (Math.sqrt(1 - (a -= 2) * a) + 1) + b
-            }], "ease-in-back": ["cubic-bezier(0.600, -0.280, 0.735, 0.045)", function (a, b, c, d, e) {
-                return void 0 === e && (e = 1.70158), c * (a /= d) * a * ((e + 1) * a - e) + b
-            }], "ease-out-back": ["cubic-bezier(0.175, 0.885, 0.320, 1.275)", function (a, b, c, d, e) {
-                return void 0 === e && (e = 1.70158), c * ((a = a / d - 1) * a * ((e + 1) * a + e) + 1) + b
-            }], "ease-in-out-back": ["cubic-bezier(0.680, -0.550, 0.265, 1.550)", function (a, b, c, d, e) {
-                return void 0 === e && (e = 1.70158), (a /= d / 2) < 1 ? c / 2 * a * a * (((e *= 1.525) + 1) * a - e) + b : c / 2 * ((a -= 2) * a * (((e *= 1.525) + 1) * a + e) + 2) + b
-            }]
+                    var e = (a /= d) * a, f = e * a;
+                    return b + c * (-2.75 * f * e + 11 * e * e + -15.5 * f + 8 * e + .25 * a)
+                }], "ease-in": ["ease-in", function (a, b, c, d) {
+                    var e = (a /= d) * a, f = e * a;
+                    return b + c * (-1 * f * e + 3 * e * e + -3 * f + 2 * e)
+                }], "ease-out": ["ease-out", function (a, b, c, d) {
+                    var e = (a /= d) * a, f = e * a;
+                    return b + c * (.3 * f * e + -1.6 * e * e + 2.2 * f + -1.8 * e + 1.9 * a)
+                }], "ease-in-out": ["ease-in-out", function (a, b, c, d) {
+                    var e = (a /= d) * a, f = e * a;
+                    return b + c * (2 * f * e + -5 * e * e + 2 * f + 2 * e)
+                }], linear: ["linear", function (a, b, c, d) {
+                    return c * a / d + b
+                }], "ease-in-quad": ["cubic-bezier(0.550, 0.085, 0.680, 0.530)", function (a, b, c, d) {
+                    return c * (a /= d) * a + b
+                }], "ease-out-quad": ["cubic-bezier(0.250, 0.460, 0.450, 0.940)", function (a, b, c, d) {
+                    return -c * (a /= d) * (a - 2) + b
+                }], "ease-in-out-quad": ["cubic-bezier(0.455, 0.030, 0.515, 0.955)", function (a, b, c, d) {
+                    return (a /= d / 2) < 1 ? c / 2 * a * a + b : -c / 2 * (--a * (a - 2) - 1) + b
+                }], "ease-in-cubic": ["cubic-bezier(0.550, 0.055, 0.675, 0.190)", function (a, b, c, d) {
+                    return c * (a /= d) * a * a + b
+                }], "ease-out-cubic": ["cubic-bezier(0.215, 0.610, 0.355, 1)", function (a, b, c, d) {
+                    return c * ((a = a / d - 1) * a * a + 1) + b
+                }], "ease-in-out-cubic": ["cubic-bezier(0.645, 0.045, 0.355, 1)", function (a, b, c, d) {
+                    return (a /= d / 2) < 1 ? c / 2 * a * a * a + b : c / 2 * ((a -= 2) * a * a + 2) + b
+                }], "ease-in-quart": ["cubic-bezier(0.895, 0.030, 0.685, 0.220)", function (a, b, c, d) {
+                    return c * (a /= d) * a * a * a + b
+                }], "ease-out-quart": ["cubic-bezier(0.165, 0.840, 0.440, 1)", function (a, b, c, d) {
+                    return -c * ((a = a / d - 1) * a * a * a - 1) + b
+                }], "ease-in-out-quart": ["cubic-bezier(0.770, 0, 0.175, 1)", function (a, b, c, d) {
+                    return (a /= d / 2) < 1 ? c / 2 * a * a * a * a + b : -c / 2 * ((a -= 2) * a * a * a - 2) + b
+                }], "ease-in-quint": ["cubic-bezier(0.755, 0.050, 0.855, 0.060)", function (a, b, c, d) {
+                    return c * (a /= d) * a * a * a * a + b
+                }], "ease-out-quint": ["cubic-bezier(0.230, 1, 0.320, 1)", function (a, b, c, d) {
+                    return c * ((a = a / d - 1) * a * a * a * a + 1) + b
+                }], "ease-in-out-quint": ["cubic-bezier(0.860, 0, 0.070, 1)", function (a, b, c, d) {
+                    return (a /= d / 2) < 1 ? c / 2 * a * a * a * a * a + b : c / 2 * ((a -= 2) * a * a * a * a + 2) + b
+                }], "ease-in-sine": ["cubic-bezier(0.470, 0, 0.745, 0.715)", function (a, b, c, d) {
+                    return -c * Math.cos(a / d * (Math.PI / 2)) + c + b
+                }], "ease-out-sine": ["cubic-bezier(0.390, 0.575, 0.565, 1)", function (a, b, c, d) {
+                    return c * Math.sin(a / d * (Math.PI / 2)) + b
+                }], "ease-in-out-sine": ["cubic-bezier(0.445, 0.050, 0.550, 0.950)", function (a, b, c, d) {
+                    return -c / 2 * (Math.cos(Math.PI * a / d) - 1) + b
+                }], "ease-in-expo": ["cubic-bezier(0.950, 0.050, 0.795, 0.035)", function (a, b, c, d) {
+                    return 0 === a ? b : c * Math.pow(2, 10 * (a / d - 1)) + b
+                }], "ease-out-expo": ["cubic-bezier(0.190, 1, 0.220, 1)", function (a, b, c, d) {
+                    return a === d ? b + c : c * (-Math.pow(2, -10 * a / d) + 1) + b
+                }], "ease-in-out-expo": ["cubic-bezier(1, 0, 0, 1)", function (a, b, c, d) {
+                    return 0 === a ? b : a === d ? b + c : (a /= d / 2) < 1 ? c / 2 * Math.pow(2, 10 * (a - 1)) + b : c / 2 * (-Math.pow(2, -10 * --a) + 2) + b
+                }], "ease-in-circ": ["cubic-bezier(0.600, 0.040, 0.980, 0.335)", function (a, b, c, d) {
+                    return -c * (Math.sqrt(1 - (a /= d) * a) - 1) + b
+                }], "ease-out-circ": ["cubic-bezier(0.075, 0.820, 0.165, 1)", function (a, b, c, d) {
+                    return c * Math.sqrt(1 - (a = a / d - 1) * a) + b
+                }], "ease-in-out-circ": ["cubic-bezier(0.785, 0.135, 0.150, 0.860)", function (a, b, c, d) {
+                    return (a /= d / 2) < 1 ? -c / 2 * (Math.sqrt(1 - a * a) - 1) + b : c / 2 * (Math.sqrt(1 - (a -= 2) * a) + 1) + b
+                }], "ease-in-back": ["cubic-bezier(0.600, -0.280, 0.735, 0.045)", function (a, b, c, d, e) {
+                    return void 0 === e && (e = 1.70158), c * (a /= d) * a * ((e + 1) * a - e) + b
+                }], "ease-out-back": ["cubic-bezier(0.175, 0.885, 0.320, 1.275)", function (a, b, c, d, e) {
+                    return void 0 === e && (e = 1.70158), c * ((a = a / d - 1) * a * ((e + 1) * a + e) + 1) + b
+                }], "ease-in-out-back": ["cubic-bezier(0.680, -0.550, 0.265, 1.550)", function (a, b, c, d, e) {
+                    return void 0 === e && (e = 1.70158), (a /= d / 2) < 1 ? c / 2 * a * a * (((e *= 1.525) + 1) * a - e) + b : c / 2 * ((a -= 2) * a * (((e *= 1.525) + 1) * a + e) + 2) + b
+                }]
         }, n = {
             "ease-in-back": "cubic-bezier(0.600, 0, 0.735, 0.045)",
             "ease-out-back": "cubic-bezier(0.175, 0.885, 0.320, 1)",
             "ease-in-out-back": "cubic-bezier(0.680, 0, 0.265, 1)"
         }, o = document, p = window, q = "bkwld-tram", r = /[\-\.0-9]/g, s = /[A-Z]/, t = "number", u = /^(rgb|#)/, v = /(em|cm|mm|in|pt|pc|px)$/, w = /(em|cm|mm|in|pt|pc|px|%)$/, x = /(deg|rad|turn)$/, y = "unitless", z = /(all|none) 0s ease 0s/, A = /^(width|height)$/, B = " ", C = o.createElement("a"), D = ["Webkit", "Moz", "O", "ms"], E = ["-webkit-", "-moz-", "-o-", "-ms-"], F = function (a) {
-            if (a in C.style)return {dom: a, css: a};
+            if (a in C.style)
+                return {dom: a, css: a};
             var b, c, d = "", e = a.split("-");
-            for (b = 0; b < e.length; b++)d += e[b].charAt(0).toUpperCase() + e[b].slice(1);
-            for (b = 0; b < D.length; b++)if (c = D[b] + d, c in C.style)return {dom: c, css: E[b] + a}
+            for (b = 0; b < e.length; b++)
+                d += e[b].charAt(0).toUpperCase() + e[b].slice(1);
+            for (b = 0; b < D.length; b++)
+                if (c = D[b] + d, c in C.style)
+                    return {dom: c, css: E[b] + a}
         }, G = b.support = {
             bind: Function.prototype.bind,
             transform: F("transform"),
@@ -182,7 +189,9 @@
         };
         if (G.transition) {
             var H = G.timing.dom;
-            if (C.style[H] = m["ease-in-back"][0], !C.style[H])for (var I in n)m[I][0] = n[I]
+            if (C.style[H] = m["ease-in-back"][0], !C.style[H])
+                for (var I in n)
+                    m[I][0] = n[I]
         }
         var J = b.frame = function () {
             var a = p.requestAnimationFrame || p.webkitRequestAnimationFrame || p.mozRequestAnimationFrame || p.oRequestAnimationFrame || p.msRequestAnimationFrame;
@@ -199,7 +208,8 @@
                 var c = k(("" + a).split(B)), d = c[0];
                 b = b || {};
                 var e = Y[d];
-                if (!e)return j("Unsupported property: " + d);
+                if (!e)
+                    return j("Unsupported property: " + d);
                 if (!b.weak || !this.props[d]) {
                     var f = e[0], g = this.props[d];
                     return g || (g = this.props[d] = new f.Bare), g.init(this.$el, c, e, b), g
@@ -209,11 +219,12 @@
             function e(a, b, c) {
                 if (a) {
                     var e = typeof a;
-                    if (b || (this.timer && this.timer.destroy(), this.queue = [], this.active = !1), "number" == e && b)return this.timer = new S({
-                        duration: a,
-                        context: this,
-                        complete: h
-                    }), void(this.active = !0);
+                    if (b || (this.timer && this.timer.destroy(), this.queue = [], this.active = !1), "number" == e && b)
+                        return this.timer = new S({
+                            duration: a,
+                            context: this,
+                            complete: h
+                        }), void(this.active = !0);
                     if ("string" == e && b) {
                         switch (a) {
                             case"hide":
@@ -230,7 +241,8 @@
                         }
                         return h.call(this)
                     }
-                    if ("function" == e)return void a.call(this, this);
+                    if ("function" == e)
+                        return void a.call(this, this);
                     if ("object" == e) {
                         var f = 0;
                         u.call(this, a, function (a, b) {
@@ -302,16 +314,19 @@
             function t() {
                 var a, b, c = [];
                 this.upstream && c.push(this.upstream);
-                for (a in this.props)b = this.props[a], b.active && c.push(b.string);
+                for (a in this.props)
+                    b = this.props[a], b.active && c.push(b.string);
                 c = c.join(","), this.style !== c && (this.style = c, this.el.style[G.transition.dom] = c)
             }
 
             function u(a, b, e) {
                 var f, g, h, i, j = b !== v, k = {};
-                for (f in a)h = a[f], f in Z ? (k.transform || (k.transform = {}), k.transform[f] = h) : (s.test(f) && (f = c(f)), f in Y ? k[f] = h : (i || (i = {}), i[f] = h));
+                for (f in a)
+                    h = a[f], f in Z ? (k.transform || (k.transform = {}), k.transform[f] = h) : (s.test(f) && (f = c(f)), f in Y ? k[f] = h : (i || (i = {}), i[f] = h));
                 for (f in k) {
                     if (h = k[f], g = this.props[f], !g) {
-                        if (!j)continue;
+                        if (!j)
+                            continue;
                         g = d.call(this, f)
                     }
                     b.call(this, g, h)
@@ -339,7 +354,8 @@
 
             function A(a, b) {
                 var c, d = this.children.length;
-                for (c = 0; d > c; c++)a.apply(this.children[c], b);
+                for (c = 0; d > c; c++)
+                    a.apply(this.children[c], b);
                 return this
             }
 
@@ -358,8 +374,10 @@
 
             b.init = function (b, d) {
                 var e = a(b);
-                if (!e.length)return this;
-                if (1 === e.length)return c(e[0], d);
+                if (!e.length)
+                    return this;
+                if (1 === e.length)
+                    return c(e[0], d);
                 var f = [];
                 return e.each(function (a, b) {
                     f.push(c(b, d))
@@ -411,39 +429,52 @@
                 var a = this.tween;
                 a && a.context && a.destroy()
             }, a.convert = function (a, b) {
-                if ("auto" == a && this.auto)return a;
+                if ("auto" == a && this.auto)
+                    return a;
                 var c, e = "number" == typeof a, f = "string" == typeof a;
                 switch (b) {
                     case t:
-                        if (e)return a;
-                        if (f && "" === a.replace(r, ""))return +a;
+                        if (e)
+                            return a;
+                        if (f && "" === a.replace(r, ""))
+                            return +a;
                         c = "number(unitless)";
                         break;
                     case u:
                         if (f) {
-                            if ("" === a && this.original)return this.original;
-                            if (b.test(a))return "#" == a.charAt(0) && 7 == a.length ? a : d(a)
+                            if ("" === a && this.original)
+                                return this.original;
+                            if (b.test(a))
+                                return "#" == a.charAt(0) && 7 == a.length ? a : d(a)
                         }
                         c = "hex or rgb string";
                         break;
                     case v:
-                        if (e)return a + this.unit;
-                        if (f && b.test(a))return a;
+                        if (e)
+                            return a + this.unit;
+                        if (f && b.test(a))
+                            return a;
                         c = "number(px) or string(unit)";
                         break;
                     case w:
-                        if (e)return a + this.unit;
-                        if (f && b.test(a))return a;
+                        if (e)
+                            return a + this.unit;
+                        if (f && b.test(a))
+                            return a;
                         c = "number(px) or string(unit or %)";
                         break;
                     case x:
-                        if (e)return a + this.angle;
-                        if (f && b.test(a))return a;
+                        if (e)
+                            return a + this.angle;
+                        if (f && b.test(a))
+                            return a;
                         c = "number(deg) or string(angle)";
                         break;
                     case y:
-                        if (e)return a;
-                        if (f && w.test(a))return a;
+                        if (e)
+                            return a;
+                        if (f && w.test(a))
+                            return a;
                         c = "number(unitless) or string(unit or %)"
                 }
                 return g(c, a), a
@@ -465,7 +496,8 @@
         }), Q = l(N, function (a, b) {
             function c(a, b) {
                 var c, d, e, f, g;
-                for (c in a)f = Z[c], e = f[0], d = f[1] || c, g = this.convert(a[c], e), b.call(this, d, g, e)
+                for (c in a)
+                    f = Z[c], e = f[0], d = f[1] || c, g = this.convert(a[c], e), b.call(this, d, g, e)
             }
 
             a.init = function () {
@@ -484,7 +516,8 @@
                     ease: this.ease
                 });
                 var c, d = {};
-                for (c in this.current)d[c] = c in b ? b[c] : this.current[c];
+                for (c in this.current)
+                    d[c] = c in b ? b[c] : this.current[c];
                 this.active = !0, this.nextStyle = this.style(d)
             }, a.fallback = function (a) {
                 var b = this.values(a);
@@ -501,7 +534,8 @@
                 V(this.el, this.name, this.style(this.current))
             }, a.style = function (a) {
                 var b, c = "";
-                for (b in a)c += b + "(" + a[b] + ") ";
+                for (b in a)
+                    c += b + "(" + a[b] + ") ";
                 return c
             }, a.values = function (a) {
                 var b, d = {};
@@ -516,7 +550,9 @@
 
             function g() {
                 var a, b, c, d = n.length;
-                if (d)for (J(g), b = K(), a = d; a--;)c = n[a], c && c.render(b)
+                if (d)
+                    for (J(g), b = K(), a = d; a--; )
+                        c = n[a], c && c.render(b)
             }
 
             function i(b) {
@@ -546,7 +582,8 @@
             }, b.render = function (a) {
                 var b, c = a - this.start;
                 if (this.delay) {
-                    if (c <= this.delay)return;
+                    if (c <= this.delay)
+                        return;
                     c -= this.delay
                 }
                 if (c < this.duration) {
@@ -555,7 +592,8 @@
                 }
                 b = this.endHex || this.begin + this.change, this.value = b + this.unit, this.update.call(this.context, this.value), this.complete.call(this.context), this.destroy()
             }, b.format = function (a, b) {
-                if (b += "", a += "", "#" == a.charAt(0))return this.startRGB = d(b), this.endRGB = d(a), this.endHex = a, this.begin = 0, void(this.change = 1);
+                if (b += "", a += "", "#" == a.charAt(0))
+                    return this.startRGB = d(b), this.endRGB = d(a), this.endHex = a, this.begin = 0, void(this.change = 1);
                 if (!this.unit) {
                     var c = b.replace(r, ""), e = a.replace(r, "");
                     c !== e && h("tween", b, a), this.unit = c
@@ -576,24 +614,27 @@
             a.init = function (a) {
                 this.context = a.context, this.update = a.update, this.tweens = [], this.current = a.current;
                 var b, c;
-                for (b in a.values)c = a.values[b], this.current[b] !== c && this.tweens.push(new R({
-                    name: b,
-                    from: this.current[b],
-                    to: c,
-                    duration: a.duration,
-                    delay: a.delay,
-                    ease: a.ease,
-                    autoplay: !1
-                }));
+                for (b in a.values)
+                    c = a.values[b], this.current[b] !== c && this.tweens.push(new R({
+                        name: b,
+                        from: this.current[b],
+                        to: c,
+                        duration: a.duration,
+                        delay: a.delay,
+                        ease: a.ease,
+                        autoplay: !1
+                    }));
                 this.play()
             }, a.render = function (a) {
                 var b, c, d = this.tweens.length, e = !1;
-                for (b = d; b--;)c = this.tweens[b], c.context && (c.render(a), this.current[c.name] = c.value, e = !0);
+                for (b = d; b--; )
+                    c = this.tweens[b], c.context && (c.render(a), this.current[c.name] = c.value, e = !0);
                 return e ? void(this.update && this.update.call(this.context)) : this.destroy()
             }, a.destroy = function () {
                 if (b.destroy.call(this), this.tweens) {
                     var a, c = this.tweens.length;
-                    for (a = c; a--;)this.tweens[a].destroy();
+                    for (a = c; a--; )
+                        this.tweens[a].destroy();
                     this.tweens = null, this.current = null
                 }
             }
@@ -608,7 +649,8 @@
             agentTests: []
         };
         b.fallback = function (a) {
-            if (!G.transition)return U.fallback = !0;
+            if (!G.transition)
+                return U.fallback = !0;
             U.agentTests.push("(" + a + ")");
             var b = new RegExp(U.agentTests.join("|"), "i");
             U.fallback = b.test(navigator.userAgent)
@@ -725,27 +767,27 @@
 
             // Create quick reference variables for speed access to core prototypes.
             var
-                push = ArrayProto.push,
-                slice = ArrayProto.slice,
-                concat = ArrayProto.concat,
-                toString = ObjProto.toString,
-                hasOwnProperty = ObjProto.hasOwnProperty;
+                    push = ArrayProto.push,
+                    slice = ArrayProto.slice,
+                    concat = ArrayProto.concat,
+                    toString = ObjProto.toString,
+                    hasOwnProperty = ObjProto.hasOwnProperty;
 
             // All **ECMAScript 5** native function implementations that we hope to use
             // are declared here.
             var
-                nativeForEach = ArrayProto.forEach,
-                nativeMap = ArrayProto.map,
-                nativeReduce = ArrayProto.reduce,
-                nativeReduceRight = ArrayProto.reduceRight,
-                nativeFilter = ArrayProto.filter,
-                nativeEvery = ArrayProto.every,
-                nativeSome = ArrayProto.some,
-                nativeIndexOf = ArrayProto.indexOf,
-                nativeLastIndexOf = ArrayProto.lastIndexOf,
-                nativeIsArray = Array.isArray,
-                nativeKeys = Object.keys,
-                nativeBind = FuncProto.bind;
+                    nativeForEach = ArrayProto.forEach,
+                    nativeMap = ArrayProto.map,
+                    nativeReduce = ArrayProto.reduce,
+                    nativeReduceRight = ArrayProto.reduceRight,
+                    nativeFilter = ArrayProto.filter,
+                    nativeEvery = ArrayProto.every,
+                    nativeSome = ArrayProto.some,
+                    nativeIndexOf = ArrayProto.indexOf,
+                    nativeLastIndexOf = ArrayProto.lastIndexOf,
+                    nativeIsArray = Array.isArray,
+                    nativeKeys = Object.keys,
+                    nativeBind = FuncProto.bind;
 
             // Collection Functions
             // --------------------
@@ -755,17 +797,20 @@
             // Delegates to **ECMAScript 5**'s native `forEach` if available.
             var each = _.each = _.forEach = function (obj, iterator, context) {
                 /* jshint shadow:true */
-                if (obj == null) return obj;
+                if (obj == null)
+                    return obj;
                 if (nativeForEach && obj.forEach === nativeForEach) {
                     obj.forEach(iterator, context);
                 } else if (obj.length === +obj.length) {
                     for (var i = 0, length = obj.length; i < length; i++) {
-                        if (iterator.call(context, obj[i], i, obj) === breaker) return;
+                        if (iterator.call(context, obj[i], i, obj) === breaker)
+                            return;
                     }
                 } else {
                     var keys = _.keys(obj);
                     for (var i = 0, length = keys.length; i < length; i++) {
-                        if (iterator.call(context, obj[keys[i]], keys[i], obj) === breaker) return;
+                        if (iterator.call(context, obj[keys[i]], keys[i], obj) === breaker)
+                            return;
                     }
                 }
                 return obj;
@@ -775,8 +820,10 @@
             // Delegates to **ECMAScript 5**'s native `map` if available.
             _.map = _.collect = function (obj, iterator, context) {
                 var results = [];
-                if (obj == null) return results;
-                if (nativeMap && obj.map === nativeMap) return obj.map(iterator, context);
+                if (obj == null)
+                    return results;
+                if (nativeMap && obj.map === nativeMap)
+                    return obj.map(iterator, context);
                 each(obj, function (value, index, list) {
                     results.push(iterator.call(context, value, index, list));
                 });
@@ -800,10 +847,13 @@
             // Aliased as `select`.
             _.filter = _.select = function (obj, predicate, context) {
                 var results = [];
-                if (obj == null) return results;
-                if (nativeFilter && obj.filter === nativeFilter) return obj.filter(predicate, context);
+                if (obj == null)
+                    return results;
+                if (nativeFilter && obj.filter === nativeFilter)
+                    return obj.filter(predicate, context);
                 each(obj, function (value, index, list) {
-                    if (predicate.call(context, value, index, list)) results.push(value);
+                    if (predicate.call(context, value, index, list))
+                        results.push(value);
                 });
                 return results;
             };
@@ -814,10 +864,13 @@
             var any = _.some = _.any = function (obj, predicate, context) {
                 predicate || (predicate = _.identity);
                 var result = false;
-                if (obj == null) return result;
-                if (nativeSome && obj.some === nativeSome) return obj.some(predicate, context);
+                if (obj == null)
+                    return result;
+                if (nativeSome && obj.some === nativeSome)
+                    return obj.some(predicate, context);
                 each(obj, function (value, index, list) {
-                    if (result || (result = predicate.call(context, value, index, list))) return breaker;
+                    if (result || (result = predicate.call(context, value, index, list)))
+                        return breaker;
                 });
                 return !!result;
             };
@@ -825,8 +878,10 @@
             // Determine if the array or object contains a given value (using `===`).
             // Aliased as `include`.
             _.contains = _.include = function (obj, target) {
-                if (obj == null) return false;
-                if (nativeIndexOf && obj.indexOf === nativeIndexOf) return obj.indexOf(target) != -1;
+                if (obj == null)
+                    return false;
+                if (nativeIndexOf && obj.indexOf === nativeIndexOf)
+                    return obj.indexOf(target) != -1;
                 return any(obj, function (value) {
                     return value === target;
                 });
@@ -855,7 +910,8 @@
             _.throttle = function (func) {
                 var wait, args, context;
                 return function () {
-                    if (wait) return;
+                    if (wait)
+                        return;
                     wait = true;
                     args = arguments;
                     context = this;
@@ -908,11 +964,13 @@
 
             // Fill in a given object with default properties.
             _.defaults = function (obj) {
-                if (!_.isObject(obj)) return obj;
+                if (!_.isObject(obj))
+                    return obj;
                 for (var i = 1, length = arguments.length; i < length; i++) {
                     var source = arguments[i];
                     for (var prop in source) {
-                        if (obj[prop] === void 0) obj[prop] = source[prop];
+                        if (obj[prop] === void 0)
+                            obj[prop] = source[prop];
                     }
                 }
                 return obj;
@@ -921,10 +979,14 @@
             // Retrieve the names of an object's properties.
             // Delegates to **ECMAScript 5**'s native `Object.keys`
             _.keys = function (obj) {
-                if (!_.isObject(obj)) return [];
-                if (nativeKeys) return nativeKeys(obj);
+                if (!_.isObject(obj))
+                    return [];
+                if (nativeKeys)
+                    return nativeKeys(obj);
                 var keys = [];
-                for (var key in obj) if (_.has(obj, key)) keys.push(key);
+                for (var key in obj)
+                    if (_.has(obj, key))
+                        keys.push(key);
                 return keys;
             };
 
@@ -944,8 +1006,8 @@
 
             // A (possibly faster) way to get the current timestamp as an integer.
             _.now = Date.now || function () {
-                    return new Date().getTime();
-                };
+                return new Date().getTime();
+            };
 
             // By default, Underscore uses ERB-style template delimiters, change the
             // following template settings to use alternative delimiters.
@@ -982,15 +1044,16 @@
             // and correctly escapes quotes within interpolated code.
             // NB: `oldSettings` only exists for backwards compatibility.
             _.template = function (text, settings, oldSettings) {
-                if (!settings && oldSettings) settings = oldSettings;
+                if (!settings && oldSettings)
+                    settings = oldSettings;
                 settings = _.defaults({}, settings, _.templateSettings);
 
                 // Combine delimiters into one regular expression via alternation.
                 var matcher = RegExp([
-                        (settings.escape || noMatch).source,
-                        (settings.interpolate || noMatch).source,
-                        (settings.evaluate || noMatch).source
-                    ].join('|') + '|$', 'g');
+                    (settings.escape || noMatch).source,
+                    (settings.interpolate || noMatch).source,
+                    (settings.evaluate || noMatch).source
+                ].join('|') + '|$', 'g');
 
                 // Compile the template source, escaping string literals appropriately.
                 var index = 0;
@@ -1013,11 +1076,12 @@
                 source += "';\n";
 
                 // If a variable is not specified, place data values in local scope.
-                if (!settings.variable) source = 'with(obj||{}){\n' + source + '}\n';
+                if (!settings.variable)
+                    source = 'with(obj||{}){\n' + source + '}\n';
 
                 source = "var __t,__p='',__j=Array.prototype.join," +
-                    "print=function(){__p+=__j.call(arguments,'');};\n" +
-                    source + 'return __p;\n';
+                        "print=function(){__p+=__j.call(arguments,'');};\n" +
+                        source + 'return __p;\n';
 
                 try {
                     var render = new Function(settings.variable || 'obj', '_', source);
@@ -1074,7 +1138,8 @@
          * @return {object}
          */
         Webflow.define = function (name, factory, options) {
-            if (modules[name]) unbindModule(modules[name]);
+            if (modules[name])
+                unbindModule(modules[name]);
             var instance = modules[name] = factory($, _, options) || {};
             bindModule(instance);
             return instance;
@@ -1110,7 +1175,8 @@
                 return;
             }
             // Otherwise add ready method to the primary queue (only once)
-            if (_.contains(primary, module.ready)) return;
+            if (_.contains(primary, module.ready))
+                return;
             primary.push(module.ready);
         }
 
@@ -1153,13 +1219,20 @@
         Webflow.env = function (mode) {
             var designFlag = window.__wf_design;
             var inApp = typeof designFlag !== 'undefined';
-            if (!mode) return inApp;
-            if (mode === 'design') return inApp && designFlag;
-            if (mode === 'preview') return inApp && !designFlag;
-            if (mode === 'slug') return inApp && window.__wf_slug;
-            if (mode === 'editor') return window.WebflowEditor;
-            if (mode === 'test') return false || window.__wf_test;
-            if (mode === 'frame') return window !== window.top;
+            if (!mode)
+                return inApp;
+            if (mode === 'design')
+                return inApp && designFlag;
+            if (mode === 'preview')
+                return inApp && !designFlag;
+            if (mode === 'slug')
+                return inApp && window.__wf_slug;
+            if (mode === 'editor')
+                return window.WebflowEditor;
+            if (mode === 'test')
+                return false || window.__wf_test;
+            if (mode === 'frame')
+                return window !== window.top;
         };
 
         // Feature detects + browser sniffs  аІ _аІ
@@ -1210,15 +1283,18 @@
             });
 
             // Bind events to target
-            if (target && types) target.on(types, proxy.up);
+            if (target && types)
+                target.on(types, proxy.up);
 
             /**
              * Add an event handler
              * @param  {function} handler
              */
             proxy.on = function (handler) {
-                if (typeof handler !== 'function') return;
-                if (_.contains(handlers, handler)) return;
+                if (typeof handler !== 'function')
+                    return;
+                if (_.contains(handlers, handler))
+                    return;
                 handlers.push(handler);
             };
 
@@ -1325,7 +1401,8 @@
             secondary = [];
 
             // If load event has not yet fired, replace the deferred
-            if (deferLoad.state() === 'pending') bindLoad();
+            if (deferLoad.state() === 'pending')
+                bindLoad();
         };
 
         // Listen for domready
@@ -1374,17 +1451,17 @@
 
             function createBadge() {
                 var $brand = $('<a class="w-webflow-badge"></a>')
-                    .attr('href', 'https://webflow.com?utm_campaign=brandjs');
+                        .attr('href', 'https://webflow.com?utm_campaign=brandjs');
 
                 var $logoArt = $('<img>')
-                    .attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-icon.60efbf6ec9.svg')
-                    .css({
-                        marginRight: '8px',
-                        width: '16px',
-                    });
+                        .attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-icon.60efbf6ec9.svg')
+                        .css({
+                            marginRight: '8px',
+                            width: '16px',
+                        });
 
                 var $logoText = $('<img>')
-                    .attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-text.6faa6a38cd.svg');
+                        .attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-text.6faa6a38cd.svg');
 
                 $brand.append($logoArt, $logoText);
                 return $brand[0];
@@ -1549,7 +1626,8 @@
                 siteId = $('html').attr('data-wf-site');
 
                 $forms = $(namespace + ' form');
-                if (!$forms.length) return;
+                if (!$forms.length)
+                    return;
                 $forms.each(build);
             }
 
@@ -1557,7 +1635,8 @@
                 // Store form state using namespace
                 var $el = $(el);
                 var data = $.data(el, namespace);
-                if (!data) data = $.data(el, namespace, {form: $el}); // data.form
+                if (!data)
+                    data = $.data(el, namespace, {form: $el}); // data.form
 
                 reset(data);
                 var wrap = $el.closest('div.w-form');
@@ -1575,7 +1654,8 @@
                 }
 
                 // Custom form action
-                if (action) return;
+                if (action)
+                    return;
 
                 // Webflow form
                 if (siteId) {
@@ -1645,7 +1725,8 @@
                         value = form.find('input[name="' + field.attr('name') + '"]:checked').val() || null;
                     }
 
-                    if (typeof value === 'string') value = $.trim(value);
+                    if (typeof value === 'string')
+                        value = $.trim(value);
                     result[name] = value;
                     status = status || getStatus(field, type, name, value);
                 });
@@ -1662,7 +1743,8 @@
                     if (!value) {
                         status = 'Please fill out the required field: ' + name;
                     } else if (emailField.test(name) || emailField.test(field.attr('type'))) {
-                        if (!emailValue.test(value)) status = 'Please enter a valid email address for: ' + name;
+                        if (!emailValue.test(value))
+                            status = 'Please enter a valid email address for: ' + name;
                     }
                 }
 
@@ -1686,7 +1768,8 @@
 
                 // Find & populate all fields
                 var status = findFields(form, payload.fields);
-                if (status) return alert(status);
+                if (status)
+                    return alert(status);
 
                 // Disable submit button
                 disableBtn(data);
@@ -1735,7 +1818,8 @@
 
                 // Find & populate all fields
                 var status = findFields(form, payload);
-                if (status) return alert(status);
+                if (status)
+                    return alert(status);
 
                 // Disable submit button
                 disableBtn(data);
@@ -1743,10 +1827,14 @@
                 // Use special format for MailChimp params
                 var fullName;
                 _.each(payload, function (value, key) {
-                    if (emailField.test(key)) payload.EMAIL = value;
-                    if (/^((full[ _-]?)?name)$/i.test(key)) fullName = value;
-                    if (/^(first[ _-]?name)$/i.test(key)) payload.FNAME = value;
-                    if (/^(last[ _-]?name)$/i.test(key)) payload.LNAME = value;
+                    if (emailField.test(key))
+                        payload.EMAIL = value;
+                    if (/^((full[ _-]?)?name)$/i.test(key))
+                        fullName = value;
+                    if (/^(first[ _-]?name)$/i.test(key))
+                        payload.FNAME = value;
+                    if (/^(last[ _-]?name)$/i.test(key))
+                        payload.LNAME = value;
                 });
 
                 if (fullName && !payload.FNAME) {
@@ -1770,7 +1858,8 @@
                     dataType: 'jsonp'
                 }).done(function (resp) {
                     data.success = (resp.result === 'success' || /already/.test(resp.msg));
-                    if (!data.success) console.info('MailChimp error: ' + resp.msg);
+                    if (!data.success)
+                        console.info('MailChimp error: ' + resp.msg);
                     afterSubmit(data);
                 }).fail(function () {
                     afterSubmit(data);
@@ -1833,13 +1922,15 @@
                 el.__wf_intro = null;
             },
             intro: function (i, el) {
-                if (el.__wf_intro) return;
+                if (el.__wf_intro)
+                    return;
                 el.__wf_intro = true;
                 $(el).triggerHandler(api.types.INTRO);
                 dispatchCustomEvent(el, 'COMPONENT_ACTIVE');
             },
             outro: function (i, el) {
-                if (!el.__wf_intro) return;
+                if (!el.__wf_intro)
+                    return;
                 el.__wf_intro = null;
                 $(el).triggerHandler(api.types.OUTRO);
                 dispatchCustomEvent(el, 'COMPONENT_INACTIVE');
@@ -1868,7 +1959,8 @@
         api.async = function () {
             for (var key in eventTriggers) {
                 var func = eventTriggers[key];
-                if (!eventTriggers.hasOwnProperty(key)) continue;
+                if (!eventTriggers.hasOwnProperty(key))
+                    continue;
 
                 // Replace trigger method with async wrapper
                 api.triggers[key] = function (i, el) {
@@ -1953,7 +2045,8 @@
 
             api.ready = function () {
                 // Redirect IX init while in design/preview modes
-                if (inApp) return env('design') ? api.design() : api.preview();
+                if (inApp)
+                    return env('design') ? api.design() : api.preview();
 
                 // Ready should only be used after destroy, as a way to re-init
                 if (config && destroyed) {
@@ -1969,7 +2062,8 @@
             // Private methods
 
             function configure(list) {
-                if (!list) return;
+                if (!list)
+                    return;
 
                 // Map all interactions by slug
                 config = {};
@@ -2012,17 +2106,21 @@
                 }
 
                 // Handle loads or readys if they exist
-                if (loads.length) Webflow.load(runLoads);
-                if (readys.length) setTimeout(runReadys, readyDelay);
+                if (loads.length)
+                    Webflow.load(runLoads);
+                if (readys.length)
+                    setTimeout(runReadys, readyDelay);
             }
 
             function build(i, el) {
                 var $el = $(el);
                 var id = $el.attr('data-ix');
                 var ix = config[id];
-                if (!ix) return;
+                if (!ix)
+                    return;
                 var triggers = ix.triggers;
-                if (!triggers) return;
+                if (!triggers)
+                    return;
 
                 // Set styles immediately to provide tram with starting transform values
                 api.style($el, ix.style);
@@ -2048,13 +2146,16 @@
                     if (type === 'click') {
                         $el.on('click' + namespace, function (evt) {
                             // Avoid late clicks on touch devices
-                            if (!Webflow.validClick(evt.currentTarget)) return;
+                            if (!Webflow.validClick(evt.currentTarget))
+                                return;
 
                             // Prevent default on empty hash urls
-                            if ($el.attr('href') === '#') evt.preventDefault();
+                            if ($el.attr('href') === '#')
+                                evt.preventDefault();
 
                             run(trigger, $el, {group: state.clicked ? 'B' : 'A'});
-                            if (stepsB) state.clicked = !state.clicked;
+                            if (stepsB)
+                                state.clicked = !state.clicked;
                         });
                         $subs = $subs.add($el);
                         return;
@@ -2089,13 +2190,16 @@
             }
 
             function convert(offset) {
-                if (!offset) return 0;
+                if (!offset)
+                    return 0;
                 offset = String(offset);
                 var result = parseInt(offset, 10);
-                if (result !== result) return 0;
+                if (result !== result)
+                    return 0;
                 if (offset.indexOf('%') > 0) {
                     result /= 100;
-                    if (result >= 1) result = 0.999;
+                    if (result >= 1)
+                        result = 0.999;
                 }
                 return result;
             }
@@ -2120,11 +2224,15 @@
                     var height = $el.outerHeight();
                     var offsetTop = anchor.offsetTop;
                     var offsetBot = anchor.offsetBot;
-                    if (offsetTop < 1 && offsetTop > 0) offsetTop *= viewHeight;
-                    if (offsetBot < 1 && offsetBot > 0) offsetBot *= viewHeight;
+                    if (offsetTop < 1 && offsetTop > 0)
+                        offsetTop *= viewHeight;
+                    if (offsetBot < 1 && offsetBot > 0)
+                        offsetBot *= viewHeight;
                     var active = (top + height - offsetTop >= viewTop && top + offsetBot <= viewTop + viewHeight);
-                    if (active === state.active) continue;
-                    if (active === false && !stepsB) continue;
+                    if (active === state.active)
+                        continue;
+                    if (active === false && !stepsB)
+                        continue;
                     state.active = active;
                     run(trigger, $el, {group: active ? 'A' : 'B'});
                 }
@@ -2150,14 +2258,17 @@
                 var preserve3d = trigger.preserve3d;
 
                 // Do not run in designer unless forced
-                if (designer && !opts.force) return;
+                if (designer && !opts.force)
+                    return;
 
                 // Operate on a set of grouped steps
                 var group = opts.group || 'A';
                 var loop = trigger['loop' + group];
                 var steps = trigger['steps' + group];
-                if (!steps || !steps.length) return;
-                if (steps.length < 2) loop = false;
+                if (!steps || !steps.length)
+                    return;
+                if (steps.length < 2)
+                    loop = false;
 
                 // One-time init before any loops
                 if (!replay) {
@@ -2172,14 +2283,17 @@
                         } else {
                             $el = $(selector);
                         }
-                        if (inApp) $el.attr('data-ix-affect', 1);
+                        if (inApp)
+                            $el.attr('data-ix-affect', 1);
                     }
 
                     // Apply empty fix for certain Chrome versions
-                    if (emptyFix) $el.addClass('w-ix-emptyfix');
+                    if (emptyFix)
+                        $el.addClass('w-ix-emptyfix');
 
                     // Set preserve3d for triggers with 3d transforms
-                    if (preserve3d) $el.css('transform-style', 'preserve-3d');
+                    if (preserve3d)
+                        $el.css('transform-style', 'preserve-3d');
                 }
 
                 var _tram = tram($el);
@@ -2192,11 +2306,14 @@
 
                 function fin() {
                     // Run trigger again if looped
-                    if (loop) return run(trigger, $el, opts, true);
+                    if (loop)
+                        return run(trigger, $el, opts, true);
 
                     // Reset any 'auto' values
-                    if (meta.width === 'auto') _tram.set({width: 'auto'});
-                    if (meta.height === 'auto') _tram.set({height: 'auto'});
+                    if (meta.width === 'auto')
+                        _tram.set({width: 'auto'});
+                    if (meta.height === 'auto')
+                        _tram.set({height: 'auto'});
 
                     // Run callback
                     done && done();
@@ -2211,7 +2328,8 @@
                 var startMethod = 'start';
 
                 // Once the transition has started, we will always use then() to add to the queue.
-                if (meta.start) addMethod = startMethod = 'then';
+                if (meta.start)
+                    addMethod = startMethod = 'then';
 
                 // Parse transitions string on the current step
                 var transitions = step.transition;
@@ -2227,8 +2345,10 @@
                 var clean = tramify(step, meta) || {};
 
                 // Store last width and height values
-                if (clean.width != null) meta.width = clean.width;
-                if (clean.height != null) meta.height = clean.height;
+                if (clean.width != null)
+                    meta.width = clean.width;
+                if (clean.height != null)
+                    meta.height = clean.height;
 
                 // When transitions are not present, set values immediately and continue queue.
                 if (transitions == null) {
@@ -2296,14 +2416,16 @@
                 var _tram = tram(el);
 
                 // Exit early when data is empty to avoid clearing upstream
-                if ($.isEmptyObject(data)) return;
+                if ($.isEmptyObject(data))
+                    return;
 
                 // Get computed transition value
                 el.css('transition', '');
                 var computed = el.css('transition');
 
                 // If computed is set to none, clear upstream
-                if (computed === transNone) computed = _tram.upstream = null;
+                if (computed === transNone)
+                    computed = _tram.upstream = null;
 
                 // Set upstream transition to none temporarily
                 _tram.upstream = transNone;
@@ -2326,8 +2448,10 @@
                 var result = {};
                 var found = false;
                 for (var key in obj) {
-                    if (key === 'transition') continue;
-                    if (key === 'keysort') continue;
+                    if (key === 'transition')
+                        continue;
+                    if (key === 'keysort')
+                        continue;
                     if (omit3d) {
                         if (key === 'z' || key === 'rotateX' || key === 'rotateY' || key === 'scaleZ') {
                             continue;
@@ -2404,11 +2528,11 @@
                 }
 
                 tram(
-                    // Focus the lightbox to receive keyboard events.
-                    removeClass($refs.lightbox, 'hide').focus()
-                )
-                    .add('opacity .3s')
-                    .start({opacity: 1});
+                        // Focus the lightbox to receive keyboard events.
+                        removeClass($refs.lightbox, 'hide').focus()
+                        )
+                        .add('opacity .3s')
+                        .start({opacity: 1});
 
                 // Prevent document from scrolling while lightbox is active.
                 addClass($refs.html, 'noscroll');
@@ -2439,31 +2563,31 @@
                 spinner = new Spinner($refs.spinner, prefixed('hide'));
 
                 $refs.content = dom('content')
-                    .append($refs.spinner, $refs.arrowLeft, $refs.arrowRight, $refs.close);
+                        .append($refs.spinner, $refs.arrowLeft, $refs.arrowRight, $refs.close);
 
                 $refs.container = dom('container')
-                    .append($refs.content, $refs.strip);
+                        .append($refs.content, $refs.strip);
 
                 $refs.lightbox = dom('backdrop hide')
-                    .append($refs.container);
+                        .append($refs.container);
 
                 // We are delegating events for performance reasons and also
                 // to not have to reattach handlers when images change.
                 $refs.strip.on('tap', selector('item'), itemTapHandler);
                 $refs.content
-                    .on('swipe', swipeHandler)
-                    .on('tap', selector('left'), handlerPrev)
-                    .on('tap', selector('right'), handlerNext)
-                    .on('tap', selector('close'), handlerHide)
-                    .on('tap', selector('image, caption'), handlerNext);
+                        .on('swipe', swipeHandler)
+                        .on('tap', selector('left'), handlerPrev)
+                        .on('tap', selector('right'), handlerNext)
+                        .on('tap', selector('close'), handlerHide)
+                        .on('tap', selector('image, caption'), handlerNext);
                 $refs.container
-                    .on('tap', selector('view, strip'), handlerHide)
-                    // Prevent images from being dragged around.
-                    .on('dragstart', selector('img'), preventDefault);
+                        .on('tap', selector('view, strip'), handlerHide)
+                        // Prevent images from being dragged around.
+                        .on('dragstart', selector('img'), preventDefault);
                 $refs.lightbox
-                    .on('keydown', keyHandler)
-                    // IE loses focus to inner nodes without letting us know.
-                    .on('focusin', focusThis);
+                        .on('keydown', keyHandler)
+                        // IE loses focus to inner nodes without letting us know.
+                        .on('focusin', focusThis);
 
                 // The `tabindex` attribute is needed to enable non-input elements
                 // to receive keyboard events.
@@ -2556,15 +2680,15 @@
 
                         if ($refs.view) {
                             tram($refs.view)
-                                .add('opacity .3s')
-                                .start({opacity: 0})
-                                .then(remover($refs.view));
+                                    .add('opacity .3s')
+                                    .start({opacity: 0})
+                                    .then(remover($refs.view));
 
                             tram($newView)
-                                .add('opacity .3s')
-                                .add('transform .3s')
-                                .set({x: index > previousIndex ? '80px' : '-80px'})
-                                .start({opacity: 1, x: 0});
+                                    .add('opacity .3s')
+                                    .add('transform .3s')
+                                    .set({x: index > previousIndex ? '80px' : '-80px'})
+                                    .start({opacity: 1, x: 0});
                         } else {
                             $newView.css('opacity', 1);
                         }
@@ -2586,9 +2710,9 @@
              */
             lightbox.hide = function () {
                 tram($refs.lightbox)
-                    .add('opacity .3s')
-                    .start({opacity: 0})
-                    .then(hideLightbox);
+                        .add('opacity .3s')
+                        .start({opacity: 0})
+                        .then(hideLightbox);
 
                 return lightbox;
             };
@@ -2812,51 +2936,51 @@
                     var vh = window.innerHeight;
                     var vw = window.innerWidth;
                     var content =
-                        '.w-lightbox-content, .w-lightbox-view, .w-lightbox-view:before {' +
-                        'height:' + vh + 'px' +
-                        '}' +
-                        '.w-lightbox-view {' +
-                        'width:' + vw + 'px' +
-                        '}' +
-                        '.w-lightbox-group, .w-lightbox-group .w-lightbox-view, .w-lightbox-group .w-lightbox-view:before {' +
-                        'height:' + (0.86 * vh) + 'px' +
-                        '}' +
-                        '.w-lightbox-image {' +
-                        'max-width:' + vw + 'px;' +
-                        'max-height:' + vh + 'px' +
-                        '}' +
-                        '.w-lightbox-group .w-lightbox-image {' +
-                        'max-height:' + (0.86 * vh) + 'px' +
-                        '}' +
-                        '.w-lightbox-strip {' +
-                        'padding: 0 ' + (0.01 * vh) + 'px' +
-                        '}' +
-                        '.w-lightbox-item {' +
-                        'width:' + (0.1 * vh) + 'px;' +
-                        'padding:' + (0.02 * vh) + 'px ' + (0.01 * vh) + 'px' +
-                        '}' +
-                        '.w-lightbox-thumbnail {' +
-                        'height:' + (0.1 * vh) + 'px' +
-                        '}' +
-                        '@media (min-width: 768px) {' +
-                        '.w-lightbox-content, .w-lightbox-view, .w-lightbox-view:before {' +
-                        'height:' + (0.96 * vh) + 'px' +
-                        '}' +
-                        '.w-lightbox-content {' +
-                        'margin-top:' + (0.02 * vh) + 'px' +
-                        '}' +
-                        '.w-lightbox-group, .w-lightbox-group .w-lightbox-view, .w-lightbox-group .w-lightbox-view:before {' +
-                        'height:' + (0.84 * vh) + 'px' +
-                        '}' +
-                        '.w-lightbox-image {' +
-                        'max-width:' + (0.96 * vw) + 'px;' +
-                        'max-height:' + (0.96 * vh) + 'px' +
-                        '}' +
-                        '.w-lightbox-group .w-lightbox-image {' +
-                        'max-width:' + (0.823 * vw) + 'px;' +
-                        'max-height:' + (0.84 * vh) + 'px' +
-                        '}' +
-                        '}';
+                            '.w-lightbox-content, .w-lightbox-view, .w-lightbox-view:before {' +
+                            'height:' + vh + 'px' +
+                            '}' +
+                            '.w-lightbox-view {' +
+                            'width:' + vw + 'px' +
+                            '}' +
+                            '.w-lightbox-group, .w-lightbox-group .w-lightbox-view, .w-lightbox-group .w-lightbox-view:before {' +
+                            'height:' + (0.86 * vh) + 'px' +
+                            '}' +
+                            '.w-lightbox-image {' +
+                            'max-width:' + vw + 'px;' +
+                            'max-height:' + vh + 'px' +
+                            '}' +
+                            '.w-lightbox-group .w-lightbox-image {' +
+                            'max-height:' + (0.86 * vh) + 'px' +
+                            '}' +
+                            '.w-lightbox-strip {' +
+                            'padding: 0 ' + (0.01 * vh) + 'px' +
+                            '}' +
+                            '.w-lightbox-item {' +
+                            'width:' + (0.1 * vh) + 'px;' +
+                            'padding:' + (0.02 * vh) + 'px ' + (0.01 * vh) + 'px' +
+                            '}' +
+                            '.w-lightbox-thumbnail {' +
+                            'height:' + (0.1 * vh) + 'px' +
+                            '}' +
+                            '@media (min-width: 768px) {' +
+                            '.w-lightbox-content, .w-lightbox-view, .w-lightbox-view:before {' +
+                            'height:' + (0.96 * vh) + 'px' +
+                            '}' +
+                            '.w-lightbox-content {' +
+                            'margin-top:' + (0.02 * vh) + 'px' +
+                            '}' +
+                            '.w-lightbox-group, .w-lightbox-group .w-lightbox-view, .w-lightbox-group .w-lightbox-view:before {' +
+                            'height:' + (0.84 * vh) + 'px' +
+                            '}' +
+                            '.w-lightbox-image {' +
+                            'max-width:' + (0.96 * vw) + 'px;' +
+                            'max-height:' + (0.96 * vh) + 'px' +
+                            '}' +
+                            '.w-lightbox-group .w-lightbox-image {' +
+                            'max-width:' + (0.823 * vw) + 'px;' +
+                            'max-height:' + (0.84 * vh) + 'px' +
+                            '}' +
+                            '}';
 
                     styleNode.textContent = content;
                 }
@@ -2927,11 +3051,11 @@
                             data.el.on('setting' + namespace, configure.bind(null, data));
                         } else {
                             data.el
-                                .on('tap' + namespace, tapHandler(data))
-                                // Prevent page scrolling to top when clicking on lightbox triggers.
-                                .on('click' + namespace, function (e) {
-                                    e.preventDefault();
-                                });
+                                    .on('tap' + namespace, tapHandler(data))
+                                    // Prevent page scrolling to top when clicking on lightbox triggers.
+                                    .on('click' + namespace, function (e) {
+                                        e.preventDefault();
+                                    });
                         }
                     });
                 }
@@ -3058,7 +3182,8 @@
                 tempLink.href = href;
 
                 // Ignore any hrefs with a colon to safely avoid all uri schemes
-                if (href.indexOf(':') >= 0) return;
+                if (href.indexOf(':') >= 0)
+                    return;
 
                 var $link = $(link);
 
@@ -3076,7 +3201,8 @@
                 }
 
                 // Ignore empty # links
-                if (href === '#') return;
+                if (href === '#')
+                    return;
 
                 // Determine whether the link should be selected
                 var match = (tempLink.href === location.href) || (href === slug) || (indexPage.test(href) && dirList.test(slug));
@@ -3095,16 +3221,17 @@
                     var height = $section.outerHeight();
                     var offset = viewHeight * 0.5;
                     var active = ($section.is(':visible') &&
-                    top + height - offset >= viewTop &&
-                    top + offset <= viewTop + viewHeight);
+                            top + height - offset >= viewTop &&
+                            top + offset <= viewTop + viewHeight);
                     _.each(anchor.addSec, function (addSec) {
                         if (!active && ($(addSec).is(':visible') &&
-                            $(addSec).offset().top + $(addSec).outerHeight() - offset >= viewTop &&
-                            $(addSec).offset().top + offset <= viewTop + viewHeight)) {
+                                $(addSec).offset().top + $(addSec).outerHeight() - offset >= viewTop &&
+                                $(addSec).offset().top + offset <= viewTop + viewHeight)) {
                             active = true;
                         }
                     });
-                    if (anchor.active === active) return;
+                    if (anchor.active === active)
+                        return;
                     anchor.active = active;
                     setClass($link, linkCurrent, active);
                 });
@@ -3112,8 +3239,10 @@
 
             function setClass($elem, className, add) {
                 var exists = $elem.hasClass(className);
-                if (add && exists) return;
-                if (!add && !exists) return;
+                if (add && exists)
+                    return;
+                if (!add && !exists)
+                    return;
                 add ? $elem.addClass(className) : $elem.removeClass(className);
             }
 
@@ -3169,7 +3298,8 @@
 
                 // Find all instances on the page
                 $navbars = $doc.find(namespace);
-                if (!$navbars.length) return;
+                if (!$navbars.length)
+                    return;
                 $navbars.each(build);
 
                 // Wire events
@@ -3194,7 +3324,8 @@
 
                 // Store state in data
                 var data = $.data(el, namespace);
-                if (!data) data = $.data(el, namespace, {open: false, el: $el, config: {}});
+                if (!data)
+                    data = $.data(el, namespace, {open: false, el: $el, config: {}});
                 data.menu = $el.find('.w-nav-menu');
                 data.links = data.menu.find('.w-nav-link');
                 data.dropdowns = data.menu.find('.w-dropdown');
@@ -3233,14 +3364,16 @@
             }
 
             function removeOverlay(data) {
-                if (!data.overlay) return;
+                if (!data.overlay)
+                    return;
                 close(data, true);
                 data.overlay.remove();
                 data.overlay = null;
             }
 
             function addOverlay(data) {
-                if (data.overlay) return;
+                if (data.overlay)
+                    return;
                 data.overlay = $(overlay).appendTo(data.el);
                 data.parent = data.menu.parent();
                 close(data, true);
@@ -3281,13 +3414,15 @@
                     options.open === false && close(data, true);
                     // Reopen if media query changed after setting
                     data.open && _.defer(function () {
-                        if (winWidth !== $win.width()) reopen(data);
+                        if (winWidth !== $win.width())
+                            reopen(data);
                     });
                 };
             }
 
             function reopen(data) {
-                if (!data.open) return;
+                if (!data.open)
+                    return;
                 close(data, true);
                 open(data, true);
             }
@@ -3319,11 +3454,13 @@
 
             function outside(data) {
                 // Unbind previous tap handler if it exists
-                if (data.outside) $doc.off('tap' + namespace, data.outside);
+                if (data.outside)
+                    $doc.off('tap' + namespace, data.outside);
 
                 // Close menu when tapped outside, debounced to wait for state
                 return _.debounce(function (evt) {
-                    if (!data.open) return;
+                    if (!data.open)
+                        return;
                     var menu = $(evt.target).closest('.w-nav-menu');
                     if (!data.menu.is(menu)) {
                         close(data);
@@ -3336,7 +3473,8 @@
                 // Check for collapsed state based on button display
                 var collapsed = data.collapsed = data.button.css('display') !== 'none';
                 // Close menu if button is no longer visible (and not in designer)
-                if (data.open && !collapsed && !designer) close(data, true);
+                if (data.open && !collapsed && !designer)
+                    close(data, true);
                 // Set max-width of links + dropdowns to match container
                 if (data.container.length) {
                     var updateEachMax = updateMax(data);
@@ -3354,24 +3492,28 @@
             function updateMax(data) {
                 // Set max-width of each element to match container
                 var containMax = data.container.css(maxWidth);
-                if (containMax === 'none') containMax = '';
+                if (containMax === 'none')
+                    containMax = '';
                 return function (i, link) {
                     link = $(link);
                     link.css(maxWidth, '');
                     // Don't set the max-width if an upstream value exists
-                    if (link.css(maxWidth) === 'none') link.css(maxWidth, containMax);
+                    if (link.css(maxWidth) === 'none')
+                        link.css(maxWidth, containMax);
                 };
             }
 
             function open(data, immediate) {
-                if (data.open) return;
+                if (data.open)
+                    return;
                 data.open = true;
                 data.menu.addClass(menuOpen);
                 data.links.addClass(linkOpen);
                 data.button.addClass(buttonOpen);
                 var config = data.config;
                 var animation = config.animation;
-                if (animation === 'none' || !tram.support.transform) immediate = true;
+                if (animation === 'none' || !tram.support.transform)
+                    immediate = true;
                 var bodyHeight = setOverlayHeight(data);
                 var menuHeight = data.menu.outerHeight(true);
                 var menuWidth = data.menu.outerWidth(true);
@@ -3382,10 +3524,12 @@
                 Webflow.redraw.up();
 
                 // Listen for tap outside events
-                if (!designer) $doc.on('tap' + namespace, data.outside);
+                if (!designer)
+                    $doc.on('tap' + namespace, data.outside);
 
                 // No transition for immediate
-                if (immediate) return;
+                if (immediate)
+                    return;
 
                 var transConfig = 'transform ' + config.duration + 'ms ' + config.easing;
 
@@ -3398,8 +3542,8 @@
                 // Over left/right
                 if (config.animOver) {
                     tram(data.menu)
-                        .add(transConfig)
-                        .set({x: config.animDirect * menuWidth, height: bodyHeight}).start({x: 0});
+                            .add(transConfig)
+                            .set({x: config.animDirect * menuWidth, height: bodyHeight}).start({x: 0});
                     data.overlay && data.overlay.width(menuWidth);
                     return;
                 }
@@ -3407,8 +3551,8 @@
                 // Drop Down
                 var offsetY = navHeight + menuHeight;
                 tram(data.menu)
-                    .add(transConfig)
-                    .set({y: -offsetY}).start({y: 0});
+                        .add(transConfig)
+                        .set({y: -offsetY}).start({y: 0});
             }
 
             function setOverlayHeight(data) {
@@ -3424,11 +3568,13 @@
             }
 
             function close(data, immediate) {
-                if (!data.open) return;
+                if (!data.open)
+                    return;
                 data.open = false;
                 data.button.removeClass(buttonOpen);
                 var config = data.config;
-                if (config.animation === 'none' || !tram.support.transform || config.duration <= 0) immediate = true;
+                if (config.animation === 'none' || !tram.support.transform || config.duration <= 0)
+                    immediate = true;
                 ix.outro(0, data.el[0]);
 
                 // Stop listening for tap outside events
@@ -3448,16 +3594,16 @@
                 // Over left/right
                 if (config.animOver) {
                     tram(data.menu)
-                        .add(transConfig)
-                        .start({x: menuWidth * config.animDirect}).then(complete);
+                            .add(transConfig)
+                            .start({x: menuWidth * config.animDirect}).then(complete);
                     return;
                 }
 
                 // Drop Down
                 var offsetY = navHeight + menuHeight;
                 tram(data.menu)
-                    .add(transConfig)
-                    .start({y: -offsetY}).then(complete);
+                        .add(transConfig)
+                        .start({y: -offsetY}).then(complete);
 
                 function complete() {
                     data.menu.height('');
@@ -3518,7 +3664,8 @@
                     }
 
                     // Ignore links being used by jQuery mobile
-                    if (window.$.mobile && $(e.currentTarget).hasClass('ui-link')) return;
+                    if (window.$.mobile && $(e.currentTarget).hasClass('ui-link'))
+                        return;
 
                     // Ignore empty # links
                     if (this.getAttribute('href') === '#') {
@@ -3537,7 +3684,8 @@
             }
 
             function findEl(hash, e) {
-                if (!validHash.test(hash)) return;
+                if (!validHash.test(hash))
+                    return;
 
                 var el = $('#' + hash);
                 if (!el.length) {
@@ -3551,11 +3699,11 @@
 
                 // Push new history state
                 if (
-                    loc.hash !== hash &&
-                    history && history.pushState &&
+                        loc.hash !== hash &&
+                        history && history.pushState &&
                         // Navigation breaks Chrome when the protocol is `file:`.
-                    !(Webflow.env.chrome && loc.protocol === 'file:')
-                ) {
+                        !(Webflow.env.chrome && loc.protocol === 'file:')
+                        ) {
                     var oldHash = history.state && history.state.hash;
                     if (oldHash !== hash) {
                         history.pushState({hash: hash}, '', '#' + hash);
@@ -3604,8 +3752,8 @@
 
                 var clock = Date.now();
                 var animate = win.requestAnimationFrame || win.mozRequestAnimationFrame || win.webkitRequestAnimationFrame || function (fn) {
-                        win.setTimeout(fn, 15);
-                    };
+                    win.setTimeout(fn, 15);
+                };
                 var duration = (472.143 * Math.log(Math.abs(start - end) + 125) - 2000) * mult;
 
                 var step = function () {
@@ -3689,10 +3837,12 @@
             function init() {
                 // Find all sliders on the page
                 $sliders = $doc.find(namespace);
-                if (!$sliders.length) return;
+                if (!$sliders.length)
+                    return;
                 $sliders.filter(':visible').each(build);
                 inRedraw = null;
-                if (fallback) return;
+                if (fallback)
+                    return;
 
                 removeListeners();
                 addListeners();
@@ -3731,7 +3881,8 @@
                 data.nav = $el.children('.w-slider-nav');
                 data.slides = data.mask.children('.w-slide');
                 data.slides.each(ix.reset);
-                if (inRedraw) data.maskWidth = 0;
+                if (inRedraw)
+                    data.maskWidth = 0;
 
                 // Disable in old browsers
                 if (!tram.support.transform) {
@@ -3860,19 +4011,23 @@
                 }
                 _.each(data.anchors, function (anchor, index) {
                     $(anchor.els).each(function (i, el) {
-                        if ($(el).index() === value) found = index;
+                        if ($(el).index() === value)
+                            found = index;
                     });
                 });
-                if (found != null) change(data, {index: found, immediate: true});
+                if (found != null)
+                    change(data, {index: found, immediate: true});
             }
 
             function startTimer(data) {
                 stopTimer(data);
                 var config = data.config;
                 var timerMax = config.timerMax;
-                if (timerMax && data.timerCount++ > timerMax) return;
+                if (timerMax && data.timerCount++ > timerMax)
+                    return;
                 data.timerId = window.setTimeout(function () {
-                    if (data.timerId == null || designer) return;
+                    if (data.timerId == null || designer)
+                        return;
                     next(data)();
                     startTimer(data);
                 }, config.delay);
@@ -3890,21 +4045,28 @@
 
                     // Designer settings
                     if (designer && evt.type === 'setting') {
-                        if (options.select === 'prev') return previousFunction(data)();
-                        if (options.select === 'next') return next(data)();
+                        if (options.select === 'prev')
+                            return previousFunction(data)();
+                        if (options.select === 'next')
+                            return next(data)();
                         configure(data);
                         layout(data);
-                        if (options.select == null) return;
+                        if (options.select == null)
+                            return;
                         select(data, options.select);
                         return;
                     }
 
                     // Swipe event
                     if (evt.type === 'swipe') {
-                        if (config.disableSwipe) return;
-                        if (Webflow.env('editor')) return;
-                        if (options.direction === 'left') return next(data)();
-                        if (options.direction === 'right') return previousFunction(data)();
+                        if (config.disableSwipe)
+                            return;
+                        if (Webflow.env('editor'))
+                            return;
+                        if (options.direction === 'left')
+                            return next(data)();
+                        if (options.direction === 'right')
+                            return previousFunction(data)();
                         return;
                     }
 
@@ -3983,7 +4145,8 @@
                 }
 
                 // Exit early if index is unchanged
-                if (data.index === data.previous) return;
+                if (data.index === data.previous)
+                    return;
 
                 // Cross Fade / Out-In
                 if (animation === 'cross') {
@@ -3991,28 +4154,28 @@
                     var wait = Math.round(duration - reduced);
                     fadeRule = 'opacity ' + reduced + 'ms ' + easing;
                     tram(prevTargs)
-                        .set({visibility: ''})
-                        .add(fadeRule)
-                        .start({opacity: 0});
+                            .set({visibility: ''})
+                            .add(fadeRule)
+                            .start({opacity: 0});
                     tram(targets)
-                        .set({visibility: '', x: offsetX, opacity: 0, zIndex: data.depth++})
-                        .add(fadeRule)
-                        .wait(wait)
-                        .then({opacity: 1})
-                        .then(resetOthers);
+                            .set({visibility: '', x: offsetX, opacity: 0, zIndex: data.depth++})
+                            .add(fadeRule)
+                            .wait(wait)
+                            .then({opacity: 1})
+                            .then(resetOthers);
                     return;
                 }
 
                 // Fade Over
                 if (animation === 'fade') {
                     tram(prevTargs)
-                        .set({visibility: ''})
-                        .stop();
+                            .set({visibility: ''})
+                            .stop();
                     tram(targets)
-                        .set({visibility: '', x: offsetX, opacity: 0, zIndex: data.depth++})
-                        .add(fadeRule)
-                        .start({opacity: 1})
-                        .then(resetOthers);
+                            .set({visibility: '', x: offsetX, opacity: 0, zIndex: data.depth++})
+                            .add(fadeRule)
+                            .start({opacity: 1})
+                            .then(resetOthers);
                     return;
                 }
 
@@ -4020,26 +4183,26 @@
                 if (animation === 'over') {
                     resetConfig = {x: data.endX};
                     tram(prevTargs)
-                        .set({visibility: ''})
-                        .stop();
+                            .set({visibility: ''})
+                            .stop();
                     tram(targets)
-                        .set({visibility: '', zIndex: data.depth++, x: offsetX + anchors[data.index].width * vector})
-                        .add(slideRule)
-                        .start({x: offsetX})
-                        .then(resetOthers);
+                            .set({visibility: '', zIndex: data.depth++, x: offsetX + anchors[data.index].width * vector})
+                            .add(slideRule)
+                            .start({x: offsetX})
+                            .then(resetOthers);
                     return;
                 }
 
                 // Slide - infinite scroll
                 if (config.infinite && shift.x) {
                     tram(data.slides.not(prevTargs))
-                        .set({visibility: '', x: shift.x})
-                        .add(slideRule)
-                        .start({x: offsetX});
+                            .set({visibility: '', x: shift.x})
+                            .add(slideRule)
+                            .start({x: offsetX});
                     tram(prevTargs)
-                        .set({visibility: '', x: shift.from})
-                        .add(slideRule)
-                        .start({x: shift.to});
+                            .set({visibility: '', x: shift.from})
+                            .add(slideRule)
+                            .start({x: shift.to});
                     data.shifted = prevTargs;
 
                 } else {
@@ -4050,16 +4213,17 @@
 
                     // Slide - basic scroll
                     tram(data.slides)
-                        .set({visibility: ''})
-                        .add(slideRule)
-                        .start({x: offsetX});
+                            .set({visibility: ''})
+                            .add(slideRule)
+                            .start({x: offsetX});
                 }
 
                 // Helper to move others out of view
                 function resetOthers() {
                     targets = $(anchors[data.index].els);
                     others = data.slides.not(targets);
-                    if (animation !== 'slide') resetConfig.visibility = 'hidden';
+                    if (animation !== 'slide')
+                        resetConfig.visibility = 'hidden';
                     tram(others).set(resetConfig);
                 }
             }
@@ -4069,8 +4233,10 @@
                 if (!data) {
                     return;
                 }
-                if (maskChanged(data)) return layout(data);
-                if (designer && slidesChanged(data)) layout(data);
+                if (maskChanged(data))
+                    return layout(data);
+                if (designer && slidesChanged(data))
+                    layout(data);
             }
 
             function layout(data) {
@@ -4081,7 +4247,8 @@
                 var width = 0;
                 var maskWidth = data.maskWidth;
                 var threshold = maskWidth - data.config.edge;
-                if (threshold < 0) threshold = 0;
+                if (threshold < 0)
+                    threshold = 0;
                 data.anchors = [{els: [], x: 0, width: 0}];
                 data.slides.each(function (i, el) {
                     if (anchor - offset > threshold) {
@@ -4099,7 +4266,8 @@
                 data.endX = anchor;
 
                 // Build dots if nav exists and needs updating
-                if (designer) data.pages = null;
+                if (designer)
+                    data.pages = null;
                 if (data.nav.length && data.pages !== pages) {
                     data.pages = pages;
                     buildNav(data);
@@ -4107,7 +4275,8 @@
 
                 // Make sure index is still within range and call change handler
                 var index = data.index;
-                if (index >= pages) index = pages - 1;
+                if (index >= pages)
+                    index = pages - 1;
                 change(data, {immediate: true, index: index});
             }
 
@@ -4115,10 +4284,12 @@
                 var dots = [];
                 var $dot;
                 var spacing = data.el.attr('data-nav-spacing');
-                if (spacing) spacing = parseFloat(spacing) + 'px';
+                if (spacing)
+                    spacing = parseFloat(spacing) + 'px';
                 for (var i = 0; i < data.pages; i++) {
                     $dot = $(dot);
-                    if (data.nav.hasClass('w-num')) $dot.text(i + 1);
+                    if (data.nav.hasClass('w-num'))
+                        $dot.text(i + 1);
                     if (spacing != null) {
                         $dot.css({
                             'margin-left': spacing,
@@ -4193,7 +4364,8 @@
 
             api.destroy = function () {
                 $tabs = $doc.find(namespace);
-                if (!$tabs.length) return;
+                if (!$tabs.length)
+                    return;
                 $tabs.each(resetIX);
                 removeListeners();
             };
@@ -4206,7 +4378,8 @@
 
                 // Find all instances on the page
                 $tabs = $doc.find(namespace);
-                if (!$tabs.length) return;
+                if (!$tabs.length)
+                    return;
                 $tabs.each(build);
                 if (Webflow.env('preview') && !inRedraw) {
                     $tabs.each(resetIX);
@@ -4226,7 +4399,8 @@
 
             function resetIX(i, el) {
                 var data = $.data(el, namespace);
-                if (!data) return;
+                if (!data)
+                    return;
                 data.links && data.links.each(ix.reset);
                 data.panes && data.panes.each(ix.reset);
             }
@@ -4236,7 +4410,8 @@
 
                 // Store state in data
                 var data = $.data(el, namespace);
-                if (!data) data = $.data(el, namespace, {el: $el, config: {}});
+                if (!data)
+                    data = $.data(el, namespace, {el: $el, config: {}});
                 data.current = null;
                 data.menu = $el.children('.w-tab-menu');
                 data.links = data.menu.children('.w-tab-link');
@@ -4294,14 +4469,17 @@
                 var tab = options.tab;
 
                 // Don't select the same tab twice
-                if (tab === data.current) return;
+                if (tab === data.current)
+                    return;
                 data.current = tab;
 
                 // Select the current link
                 data.links.each(function (i, el) {
                     var $el = $(el);
-                    if (el.getAttribute(tabAttr) === tab) $el.addClass(linkCurrent).each(ix.intro);
-                    else if ($el.hasClass(linkCurrent)) $el.removeClass(linkCurrent).each(ix.outro);
+                    if (el.getAttribute(tabAttr) === tab)
+                        $el.addClass(linkCurrent).each(ix.intro);
+                    else if ($el.hasClass(linkCurrent))
+                        $el.removeClass(linkCurrent).each(ix.outro);
                 });
 
                 // Find the new tab panes and keep track of previous
@@ -4325,7 +4503,8 @@
                     $previous.removeClass(tabActive);
                     // Redraw to benefit components in the hidden tab pane
                     // But only if not currently in the middle of a redraw
-                    if (!inRedraw) Webflow.redraw.up();
+                    if (!inRedraw)
+                        Webflow.redraw.up();
                     return;
                 }
 
@@ -4333,9 +4512,9 @@
                 if ($previous.length && config.outro) {
                     $previous.each(ix.outro);
                     tram($previous)
-                        .add('opacity ' + config.outro + 'ms ' + easing, {fallback: safari})
-                        .start({opacity: 0})
-                        .then(intro);
+                            .add('opacity ' + config.outro + 'ms ' + easing, {fallback: safari})
+                            .start({opacity: 0})
+                            .then(intro);
                 } else {
                     // Skip the outro and play intro
                     intro();
@@ -4358,14 +4537,15 @@
                     Webflow.redraw.up();
 
                     // Set opacity immediately if intro is zero
-                    if (!config.intro) return tram($targets).set({opacity: 1});
+                    if (!config.intro)
+                        return tram($targets).set({opacity: 1});
 
                     // Otherwise fade in opacity
                     tram($targets)
-                        .set({opacity: 0})
-                        .redraw()
-                        .add('opacity ' + config.intro + 'ms ' + easing, {fallback: safari})
-                        .start({opacity: 1});
+                            .set({opacity: 0})
+                            .redraw()
+                            .add('opacity ' + config.intro + 'ms ' + easing, {fallback: safari})
+                            .start({opacity: 1});
                 }
             }
 
@@ -4392,7 +4572,8 @@
             }
 
             api.init = function (el) {
-                if (fallback) return null;
+                if (fallback)
+                    return null;
                 el = typeof el === 'string' ? $(el).get(0) : el;
                 return el ? new Touch(el) : null;
             };
@@ -4438,7 +4619,8 @@
                 }
 
                 function move(evt) {
-                    if (!active) return;
+                    if (!active)
+                        return;
 
                     if (useTouch && evt.type === 'mousemove') {
                         evt.preventDefault();
@@ -4466,7 +4648,8 @@
                 }
 
                 function end(evt) {
-                    if (!active) return;
+                    if (!active)
+                        return;
                     active = false;
 
                     if (useTouch && evt.type === 'mouseup') {
@@ -4476,7 +4659,8 @@
                         return;
                     }
 
-                    if (!dirty) triggerEvent('tap', evt);
+                    if (!dirty)
+                        triggerEvent('tap', evt);
                 }
 
                 function cancel() {
@@ -4526,16 +4710,16 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0, "x": "0px", "y": "50px", "z": "0px"},
             "triggers": [{
-                "type": "load",
-                "stepsA": [{
-                    "opacity": 1,
-                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                    "x": "0px",
-                    "y": "0px",
-                    "z": "0px"
-                }],
-                "stepsB": []
-            }]
+                    "type": "load",
+                    "stepsA": [{
+                            "opacity": 1,
+                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                            "x": "0px",
+                            "y": "0px",
+                            "z": "0px"
+                        }],
+                    "stepsB": []
+                }]
         }
     },
     {
@@ -4544,16 +4728,16 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0},
             "triggers": [{
-                "type": "load",
-                "stepsA": [{
-                    "opacity": 1,
-                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                    "x": "0px",
-                    "y": "0px",
-                    "z": "0px"
-                }],
-                "stepsB": []
-            }]
+                    "type": "load",
+                    "stepsA": [{
+                            "opacity": 1,
+                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                            "x": "0px",
+                            "y": "0px",
+                            "z": "0px"
+                        }],
+                    "stepsB": []
+                }]
         }
     },
     {
@@ -4562,17 +4746,17 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0},
             "triggers": [{
-                "type": "scroll",
-                "offsetBot": "20%",
-                "stepsA": [{"wait": "150ms"}, {
-                    "opacity": 1,
-                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                    "x": "0px",
-                    "y": "0px",
-                    "z": "0px"
-                }],
-                "stepsB": []
-            }]
+                    "type": "scroll",
+                    "offsetBot": "20%",
+                    "stepsA": [{"wait": "150ms"}, {
+                            "opacity": 1,
+                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                            "x": "0px",
+                            "y": "0px",
+                            "z": "0px"
+                        }],
+                    "stepsB": []
+                }]
         }
     },
     {
@@ -4581,18 +4765,18 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0},
             "triggers": [{
-                "type": "scroll",
-                "offsetBot": "20%",
-                "stepsA": [{"wait": "300ms", "transition": "transform 200 ease 0"}, {
-                    "wait": "100ms",
-                    "opacity": 1,
-                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                    "x": "0px",
-                    "y": "0px",
-                    "z": "0px"
-                }],
-                "stepsB": []
-            }]
+                    "type": "scroll",
+                    "offsetBot": "20%",
+                    "stepsA": [{"wait": "300ms", "transition": "transform 200 ease 0"}, {
+                            "wait": "100ms",
+                            "opacity": 1,
+                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                            "x": "0px",
+                            "y": "0px",
+                            "z": "0px"
+                        }],
+                    "stepsB": []
+                }]
         }
     },
     {
@@ -4601,18 +4785,18 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0},
             "triggers": [{
-                "type": "scroll",
-                "offsetBot": "20%",
-                "stepsA": [{"wait": "450ms"}, {
-                    "wait": "200ms",
-                    "opacity": 1,
-                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                    "x": "0px",
-                    "y": "0px",
-                    "z": "0px"
-                }],
-                "stepsB": []
-            }]
+                    "type": "scroll",
+                    "offsetBot": "20%",
+                    "stepsA": [{"wait": "450ms"}, {
+                            "wait": "200ms",
+                            "opacity": 1,
+                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                            "x": "0px",
+                            "y": "0px",
+                            "z": "0px"
+                        }],
+                    "stepsB": []
+                }]
         }
     },
     {
@@ -4621,16 +4805,16 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0, "x": "-50px", "y": "0px", "z": "0px"},
             "triggers": [{
-                "type": "scroll",
-                "stepsA": [{
-                    "opacity": 1,
-                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                    "x": "0px",
-                    "y": "0px",
-                    "z": "0px"
-                }],
-                "stepsB": []
-            }]
+                    "type": "scroll",
+                    "stepsA": [{
+                            "opacity": 1,
+                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                            "x": "0px",
+                            "y": "0px",
+                            "z": "0px"
+                        }],
+                    "stepsB": []
+                }]
         }
     },
     {
@@ -4639,16 +4823,16 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0, "x": "50px", "y": "0px", "z": "0px"},
             "triggers": [{
-                "type": "scroll",
-                "stepsA": [{
-                    "opacity": 1,
-                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                    "x": "0px",
-                    "y": "0px",
-                    "z": "0px"
-                }],
-                "stepsB": []
-            }]
+                    "type": "scroll",
+                    "stepsA": [{
+                            "opacity": 1,
+                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                            "x": "0px",
+                            "y": "0px",
+                            "z": "0px"
+                        }],
+                    "stepsB": []
+                }]
         }
     },
     {
@@ -4657,16 +4841,16 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0, "x": "0px", "y": "-50px", "z": "0px"},
             "triggers": [{
-                "type": "scroll",
-                "stepsA": [{
-                    "opacity": 1,
-                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                    "x": "0px",
-                    "y": "0px",
-                    "z": "0px"
-                }],
-                "stepsB": []
-            }]
+                    "type": "scroll",
+                    "stepsA": [{
+                            "opacity": 1,
+                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                            "x": "0px",
+                            "y": "0px",
+                            "z": "0px"
+                        }],
+                    "stepsB": []
+                }]
         }
     },
     {
@@ -4675,17 +4859,17 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0, "x": "0px", "y": "50px", "z": "0px"},
             "triggers": [{
-                "type": "scroll",
-                "offsetBot": "20%",
-                "stepsA": [{
-                    "opacity": 1,
-                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                    "x": "0px",
-                    "y": "0px",
-                    "z": "0px"
-                }],
-                "stepsB": []
-            }]
+                    "type": "scroll",
+                    "offsetBot": "20%",
+                    "stepsA": [{
+                            "opacity": 1,
+                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                            "x": "0px",
+                            "y": "0px",
+                            "z": "0px"
+                        }],
+                    "stepsB": []
+                }]
         }
     },
     {
@@ -4694,17 +4878,17 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0, "x": "0px", "y": "50px", "z": "0px"},
             "triggers": [{
-                "type": "scroll",
-                "offsetBot": "20%",
-                "stepsA": [{"wait": "300ms"}, {
-                    "opacity": 1,
-                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                    "x": "0px",
-                    "y": "0px",
-                    "z": "0px"
-                }],
-                "stepsB": []
-            }]
+                    "type": "scroll",
+                    "offsetBot": "20%",
+                    "stepsA": [{"wait": "300ms"}, {
+                            "opacity": 1,
+                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                            "x": "0px",
+                            "y": "0px",
+                            "z": "0px"
+                        }],
+                    "stepsB": []
+                }]
         }
     },
     {
@@ -4713,16 +4897,16 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0, "scaleX": 0.6000000000000003, "scaleY": 0.6000000000000003, "scaleZ": 1},
             "triggers": [{
-                "type": "scroll",
-                "stepsA": [{
-                    "opacity": 1,
-                    "transition": "transform 600ms ease 0ms, opacity 600ms ease 0ms",
-                    "scaleX": 1.08,
-                    "scaleY": 1.08,
-                    "scaleZ": 1
-                }, {"transition": "transform 150ms ease-out-cubic 0ms", "scaleX": 1, "scaleY": 1, "scaleZ": 1}],
-                "stepsB": []
-            }]
+                    "type": "scroll",
+                    "stepsA": [{
+                            "opacity": 1,
+                            "transition": "transform 600ms ease 0ms, opacity 600ms ease 0ms",
+                            "scaleX": 1.08,
+                            "scaleY": 1.08,
+                            "scaleZ": 1
+                        }, {"transition": "transform 150ms ease-out-cubic 0ms", "scaleX": 1, "scaleY": 1, "scaleZ": 1}],
+                    "stepsB": []
+                }]
         }
     }
 ]);
@@ -4733,11 +4917,11 @@ Webflow.require('ix').init([
 $(document).ready(function () {
     var lang = $('#lang').data('lang');
     /*if (lang == "eng") {
-        // Show ( seconds ) , Hidden ( seconds) , mess for Admin(#email - the user email) , email Admin for send , messForUser , Days hidden form if click CLOSE
-        subscribe(2, 20, 'РќРѕРІР°СЏ РїРѕРґРїРёСЃРєР° РЅР° РЅРѕРІРѕСЃС‚Рё: #email', 'ask@freedcoin.io', 'Hello! You subscribed to our news! FREEDcoin team.', 3);
-    } else {
-        subscribe(2, 20, 'РќРѕРІР°СЏ РїРѕРґРїРёСЃРєР° РЅР° РЅРѕРІРѕСЃС‚Рё: #email', 'ask@freedcoin.io', 'Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ! Р’С‹ РїРѕРґРїРёСЃР°Р»РёСЃСЊ РЅР° РЅР°С€Рё РЅРѕРІРѕСЃС‚Рё! РљРѕРјР°РЅРґР° FREEDcoin.', 3);
-    }*/
+     // Show ( seconds ) , Hidden ( seconds) , mess for Admin(#email - the user email) , email Admin for send , messForUser , Days hidden form if click CLOSE
+     subscribe(2, 20, 'РќРѕРІР°СЏ РїРѕРґРїРёСЃРєР° РЅР° РЅРѕРІРѕСЃС‚Рё: #email', 'ask@freedcoin.io', 'Hello! You subscribed to our news! FREEDcoin team.', 3);
+     } else {
+     subscribe(2, 20, 'РќРѕРІР°СЏ РїРѕРґРїРёСЃРєР° РЅР° РЅРѕРІРѕСЃС‚Рё: #email', 'ask@freedcoin.io', 'Р—РґСЂР°РІСЃС‚РІСѓР№С‚Рµ! Р’С‹ РїРѕРґРїРёСЃР°Р»РёСЃСЊ РЅР° РЅР°С€Рё РЅРѕРІРѕСЃС‚Рё! РљРѕРјР°РЅРґР° FREEDcoin.', 3);
+     }*/
     //retina
     if (window.devicePixelRatio > 1 && window.devicePixelRatio < 2) {
         var lowresImages = $('img.retina');
@@ -4815,10 +4999,10 @@ $(document).ready(function () {
 
 
     $('a.open-document-whitepaper').on('click', function () {
-        ga('send', 'event', lang, 'download', 'whitepaper');
+        //ga('send', 'event', lang, 'download', 'whitepaper');
     });
     $('a.open-document-onepager').on('click', function () {
-        ga('send', 'event', lang, 'download', 'onepager');
+        //ga('send', 'event', lang, 'download', 'onepager');
     });
 
     $('.faq-category-question').on('click', function (event) {
@@ -4851,6 +5035,7 @@ $(document).ready(function () {
         modal.find('form')[0].reset();
         modal.find('form').show();
         modal.find('.form-message-buy').hide();
+        modal.find('[type="submit"]').removeAttr('disabled').css('opacity', 1);
     });
 
     /*$('.bck-table').on('scroll', function(){
@@ -4868,7 +5053,7 @@ $(document).ready(function () {
     });
 
     /*resizeWin();
-    window.onresize = resizeWin;*/
+     window.onresize = resizeWin;*/
 });
 
 function resizeWin() {
@@ -4878,7 +5063,7 @@ function resizeWin() {
     });
 
     /*var scrollBlock = $('.bck-table')[0];
-
+     
      if(scrollBlock.clientWidth != scrollBlock.scrollWidth)
      {
      if(!$('.bck-table').hasClass('scrollsecond'))
@@ -4894,81 +5079,45 @@ function resizeWin() {
 }
 
 function sendBuyForm() {
-    console.log('1');
+
     var $form = $('.buy-form');
 
     $form.find('.error').removeClass('error');
 
     $form.find('[type="submit"]').attr('disabled', true).css('opacity', 0.7);
 
-    var name = $form.find('[name="name"]').val().trim();
-    var email = $form.find('[name="email"]').val().trim();
-    var lang = $form.find('[name="lang"]').val().trim();
-    var amount = parseInt($form.find('[name="amount"]').val().trim(), 10) || 0;
-    var subscribe = $form.find('[type="checkbox"]:checked').length ? 'on' : 'off';
+    var testList = $form.find('[type="text"]');
+    testList.each(function () {
 
-    var message = $form.find('[name="message"]').val().trim();
-
-    if (name.length <= 1)
-        $form.find('[name="name"]').addClass('error');
-
-    if (email.length <= 1)
-        $form.find('[name="email"]').addClass('error');
-
-    if (message.length <= 1 || message.length > 1000)
-        $form.find('[name="message"]').addClass('error');
-
-    if (!amount || amount <= 0)
-        $form.find('[name="amount"]').addClass('error');
+        var val = $(this).val().trim();
+        if (val.length == 0)
+        {
+            // $(this).addClass('error');
+        }
+    });
 
     if ($form.find('.error').length > 0) {
         $form.find('[type="submit"]').removeAttr('disabled').css('opacity', 1);
         return false;
     }
 
-    var formData = {
-        'entry.1187856019': name,
-        'entry.235303855': amount,
-        'entry.944271930': email,
-        'entry.1489531918': message,
-        'entry.550574252': (subscribe == 'on') ? 'Yes' : 'No'
-    };
-
     $.ajax({
-        url: "https://docs.google.com/forms/d/1ZXMT-Pg2boePBlQsgfHM7tI91GulJ41nxLDZUrrPo-A/formResponse",
-        data: formData,
+        url: "send-mail.php",
+        data: $form.serialize(),
         type: "POST",
-        dataType: "xml",
-        statusCode: {
-            0: function () {
-                $form.slideUp();
-                $('.form-message-buy').slideDown();
-            },
-            200: function () {
-                $form.slideUp();
-                $('.form-message-buy').slideDown();
-            }
+        onSuccess: function (data) {
+            console.log(data);
         }
     });
 
-    var data = {
-        'name': name,
-        'email': email,
-        'amount': amount,
-        'message': message,
-        'subscribe': subscribe,
-        'lang': lang,
-    };
+    $('.form-message-buy').slideDown();
 
-    $.post('form-buy.php', data, function (r) {
-        $form.find('[type="submit"]').removeAttr('disabled').css('opacity', 1);
+    setTimeout(function () {
+        
+        $form.trigger('resetSubmit');
+        $('.buyclose').click();
+    }, 3000);
 
-        if (r == 'ok') {
-            $form.slideUp();
-            $('.form-message-buy').slideDown();
-            ga('send', 'event', 'eng', 'buy-send', 'pop-up');
-        }
-    });
 
     return false;
 }

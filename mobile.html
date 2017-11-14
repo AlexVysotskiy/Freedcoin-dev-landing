@@ -48,10 +48,10 @@
                 $('#fullpage').fullpage({
                     scrollOverflow: true,
                     verticalCentered: false,
-                    sectionsColor: ['#fff','#fff','#fff','#fff','#242b37']
+                    sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff', '#242b37']
                 });
 
-                $.fn.fullpage.setAllowScrolling(false);
+//                $.fn.fullpage.setAllowScrolling(false);
             });
         </script>
     </head>
@@ -275,15 +275,152 @@
 
                             <div>
                                 <div class="center section-block-subheading">
-                                    <a href="#" class="button-golden register-button" onclick="$.fn.fullpage.moveTo(5);">
+                                    <a href="#" class="button-golden" onclick="$.fn.fullpage.moveTo(5);">
                                         Зарегистрировать разработчика
                                     </a>
+                                </div>
+
+                                <div class="form-message-buy" style="display: none; color: #000;">
+                                    Спасибо за регистрацию!
                                 </div>
                             </div>
 
                         </div>
 
                         <br/>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="second section-block buy-form-holder">
+                    <div class="w-container">
+
+                        <div class="w-row">
+
+                            <h2>
+                                Зарегистрируйтесь как партнер - разработчик игр и получите первым 
+                                доступ к SDK и ряд других стартовых преимуществ:
+                            </h2>
+
+                            <script>
+                                $(document).ready(function () {
+                                    $('.buy-form').on('submit', function () {
+                                        return false;
+                                    }).on('resetSubmit', function () {
+
+                                        $.fn.fullpage.moveTo(4);
+
+                                        $(this)[0].reset();
+
+                                        setTimeout(function () {
+
+                                            $('.form-message-buy').hide();
+                                        }, 3000);
+
+                                        $(this).find('[type="submit"]').removeAttr('disabled').css('opacity', 1);
+                                    });
+                                });
+                            </script>
+
+                            <form class="buy-form" onsubmit="return sendBuyForm();">
+
+                                <div class="form-group">
+                                    <label>Название компании</label>
+                                    <input type="text" name="company-name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Веб-сайт</label>
+                                    <input type="text" name="site">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Укажите название хотя бы одной игры, в которой вы хотели бы использовать FREED</label>
+                                    <input type="text" name="game-list">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Веб-сайт игры</label>
+                                    <input type="text" name="game-site">
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label>Укажите тип игры</label>
+
+                                    <br/>
+                                    <div class="w-row">
+
+                                        <div class="w-col w-col-4 radio-styled">
+                                            <input id="type-1" name="game-type" type="radio" value="Мобильная" checked>
+                                            <label for="type-1" class="radio-label">Мобильная</label>
+                                        </div>
+
+                                        <div class=" w-col w-col-2 radio-styled">
+                                            <input id="type-2" name="game-type" type="radio" value="PC">
+                                            <label for="type-2" class="radio-label">PC</label>
+                                        </div>
+
+                                        <div class=" w-col w-col-5 radio-styled">
+                                            <input id="type-3" name="game-type" type="radio" value="Кросс-платформенная">
+                                            <label for="type-3" class="radio-label">Кросс-платформенная</label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Оценочная аудитория игры, MAU</label>
+                                    <input type="text" name="mau">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Имя контактного лица</label>
+                                    <input type="text" name="contact-name">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Профиль контактного лица</label>
+                                    <div class="w-row">
+
+                                        <div class="w-col w-col-3 radio-styled">
+                                            <input id="profile-1" name="profile-type" type="radio" value="Разработчик" checked>
+                                            <label for="profile-1" class="radio-label">Разработчик</label>
+                                        </div>
+
+                                        <div class=" w-col w-col-3 radio-styled">
+                                            <input id="profile-2" name="profile-type" type="radio" value="Совладелец">
+                                            <label for="profile-2" class="radio-label">Совладелец</label>
+                                        </div>
+
+                                        <div class=" w-col w-col-5 radio-styled">
+                                            <input id="profile-3" name="profile-type" type="radio" value="Менеджер по маркетингу">
+                                            <label for="profile-3" class="radio-label">Менеджер по маркетингу</label>
+                                        </div>
+
+                                        <div class=" w-col w-col-3 radio-styled">
+                                            <input id="profile-4" name="profile-type" type="radio" value="Другое">
+                                            <label for="profile-4" class="radio-label">Другое</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>E-mail или телефон</label>
+                                    <input type="text" name="contact-info">
+                                </div>
+
+                                <div class="text-center w-clearfix" style="text-align: left">
+                                    <input type="submit" value="Отправить">
+                                    <input type="submit" value="Отменить" onclick="$.fn.fullpage.moveTo(4);
+                                            return false;">
+                                </div>
+
+                            </form>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -368,6 +505,7 @@
                 </div>
             </div>
         </div>
+
 
         <script type="text/javascript" src="js/nav.js"></script>
         <script type="text/javascript" src="js/jquery.countdown.js"></script>
