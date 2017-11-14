@@ -4786,55 +4786,6 @@ $(document).ready(function () {
             }
         });
     }
-    /**/
-    /*var $mobilemenu = $('<div />');
-     $mobilemenu.attr('id', 'mobilemenu');
-
-     $mobilemenu.append('<a class="closemenu" href="#" data-action="mobilemenu-close">Close</a>');
-
-     $('ul.nav-menu').first().clone().removeClass().addClass('nav-menu').appendTo($mobilemenu);
-     $('ul.languages-list').first().clone().removeClass().addClass('languages-list').appendTo($mobilemenu).show();
-     $('.hero-social').first().clone().removeClass().addClass('hero-social').appendTo($mobilemenu);
-
-     //var $add = $('a.language').clone().removeClass().addClass('active').wrap('li');
-     //$add.prependTo($mobilemenu.find('ul.languages-list'));
-
-     $mobilemenu.appendTo('body');
-
-     $('[data-action="mobilemenu-show"]').on('click', function(){
-     $('#mobilemenu').addClass('active');
-     });
-
-     $('[data-action="mobilemenu-close"]').on('click', function(){
-     $('#mobilemenu').removeClass('active');
-     });*/
-
-    $.getJSON("https://freedcoin.io/getETH.php", function (data) {
-        if (data) {
-            var goal = 3000000;
-            var sum = 0;
-            var perc = 0;
-            $.each(data, function (idx, item) {
-                if (idx == "eth") {
-                    item = new Number(item).toFixed() / 1000000000000000000;
-                    item = item.toFixed(4);
-                    sum += item;
-                } else if (idx == "dash") {
-                    item = parseFloat(item).toFixed(4);
-                    sum += item * coins_config[idx + '_to_eth'];
-                } else {
-                    item = parseFloat(item) / 100000000;
-                    item = item.toFixed(4);
-                    sum += item * coins_config[idx + '_to_eth'];
-                }
-                $("." + idx + "-balance span").html(item);
-            });
-            sum = Math.round(sum * coins_config['eth_to_dollar']);
-            perc = sum / (goal / 100);
-            $(".goal_title .total_collected").html(sum.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1, '));
-            $(".goal_slider .goal_collect").css('width', perc + '%');
-        }
-    });
 
     if (lang == 'eng') {
         var videoURL = 'https://www.youtube.com/embed/-7cHszl-FcQ';
