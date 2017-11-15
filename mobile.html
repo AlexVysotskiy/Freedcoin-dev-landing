@@ -33,27 +33,41 @@
 
         $(document).ready(function () {
 
-
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                    $('.scrollup').fadeIn();
-                } else {
-                    $('.scrollup').fadeOut();
-                }
-            });
-
-            $('.scrollup').click(function () {
-                $("html, body").animate({scrollTop: 0}, 600);
-                return false;
-            });
-
             $('#fullpage').fullpage({
                 scrollOverflow: true,
                 verticalCentered: false,
-                sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff', '#242b37']
+                sectionsColor: ['#fff', '#fff', '#fff', '#fff', '#fff', '#242b37'],
+                afterRender: function () {
+
+                    $('body').on('click', '.reset-form', function () {
+
+                        $('.buy-form').trigger('resetSubmit');
+                        return false;
+                    });
+
+                    $('body').on('resetSubmit', '.buy-form', function () {
+
+                        $.fn.fullpage.moveTo(4);
+
+                        $(this)[0].reset();
+
+                        setTimeout(function () {
+                            $('.form-message-buy').hide();
+                        }, 3000);
+
+                        $(this).find('[type="submit"]').removeAttr('disabled').css('opacity', 1);
+                    }).on('submit', '.buy-form', function () {
+
+                        return sendBuyForm();
+                    });
+                },
+                scrollOverflowOptions: {
+                    click:false,
+                    preventDefaultException: {tagName: /.*/}
+                }
             });
 
-            $.fn.fullpage.setAllowScrolling(false);
+            //$.fn.fullpage.setAllowScrolling(false);
         });
     </script>
 </head>
@@ -316,27 +330,7 @@
                         доступ к SDK и ряд других стартовых преимуществ:
                     </h2>
 
-                    <script>
-                        $(document).ready(function () {
-                            $('.buy-form').on('submit', function () {
-                                return false;
-                            }).on('resetSubmit', function () {
-
-                                $.fn.fullpage.moveTo(4);
-
-                                $(this)[0].reset();
-
-                                setTimeout(function () {
-
-                                    $('.form-message-buy').hide();
-                                }, 3000);
-
-                                $(this).find('[type="submit"]').removeAttr('disabled').css('opacity', 1);
-                            });
-                        });
-                    </script>
-
-                    <form class="buy-form" onsubmit="return sendBuyForm();">
+                    <form class="buy-form" method="post">
 
                         <div class="form-group">
                             <label>Название компании</label>
@@ -429,13 +423,17 @@
                         </div>
 
                         <div class="text-center w-clearfix" style="text-align: left">
-                            <input type="submit" value="Отправить">
-                            <a href="#" class="button-golden" onclick="$('buy-form').trigger('resetSubmit');return false;">
+                            <button class="button-golden" type="submit">
+                                Отправить
+                            </button>
+                            <span class="button-golden reset-form">
                                 Отменить
-                            </a>
+                            </span>
                         </div>
 
                     </form>
+
+                    <br/><br/>
 
                 </div>
             </div>
@@ -526,7 +524,7 @@
 <script type="text/javascript" src="js/nav.js"></script>
 <script type="text/javascript" src="js/jquery.countdown.js"></script>
 <script type="text/javascript" src="js/coins_config.js"></script>
-<script type="text/javascript" src="js/webflow.js?v=2"></script>
+<script type="text/javascript" src="js/webflow.js?v=3"></script>
 <script src="js/owl.carousel.min.js"></script>
 
 <script>

@@ -105,68 +105,68 @@
             return g
         }("prototype", {}.hasOwnProperty), m = {
             ease: ["ease", function (a, b, c, d) {
-                    var e = (a /= d) * a, f = e * a;
-                    return b + c * (-2.75 * f * e + 11 * e * e + -15.5 * f + 8 * e + .25 * a)
-                }], "ease-in": ["ease-in", function (a, b, c, d) {
-                    var e = (a /= d) * a, f = e * a;
-                    return b + c * (-1 * f * e + 3 * e * e + -3 * f + 2 * e)
-                }], "ease-out": ["ease-out", function (a, b, c, d) {
-                    var e = (a /= d) * a, f = e * a;
-                    return b + c * (.3 * f * e + -1.6 * e * e + 2.2 * f + -1.8 * e + 1.9 * a)
-                }], "ease-in-out": ["ease-in-out", function (a, b, c, d) {
-                    var e = (a /= d) * a, f = e * a;
-                    return b + c * (2 * f * e + -5 * e * e + 2 * f + 2 * e)
-                }], linear: ["linear", function (a, b, c, d) {
-                    return c * a / d + b
-                }], "ease-in-quad": ["cubic-bezier(0.550, 0.085, 0.680, 0.530)", function (a, b, c, d) {
-                    return c * (a /= d) * a + b
-                }], "ease-out-quad": ["cubic-bezier(0.250, 0.460, 0.450, 0.940)", function (a, b, c, d) {
-                    return -c * (a /= d) * (a - 2) + b
-                }], "ease-in-out-quad": ["cubic-bezier(0.455, 0.030, 0.515, 0.955)", function (a, b, c, d) {
-                    return (a /= d / 2) < 1 ? c / 2 * a * a + b : -c / 2 * (--a * (a - 2) - 1) + b
-                }], "ease-in-cubic": ["cubic-bezier(0.550, 0.055, 0.675, 0.190)", function (a, b, c, d) {
-                    return c * (a /= d) * a * a + b
-                }], "ease-out-cubic": ["cubic-bezier(0.215, 0.610, 0.355, 1)", function (a, b, c, d) {
-                    return c * ((a = a / d - 1) * a * a + 1) + b
-                }], "ease-in-out-cubic": ["cubic-bezier(0.645, 0.045, 0.355, 1)", function (a, b, c, d) {
-                    return (a /= d / 2) < 1 ? c / 2 * a * a * a + b : c / 2 * ((a -= 2) * a * a + 2) + b
-                }], "ease-in-quart": ["cubic-bezier(0.895, 0.030, 0.685, 0.220)", function (a, b, c, d) {
-                    return c * (a /= d) * a * a * a + b
-                }], "ease-out-quart": ["cubic-bezier(0.165, 0.840, 0.440, 1)", function (a, b, c, d) {
-                    return -c * ((a = a / d - 1) * a * a * a - 1) + b
-                }], "ease-in-out-quart": ["cubic-bezier(0.770, 0, 0.175, 1)", function (a, b, c, d) {
-                    return (a /= d / 2) < 1 ? c / 2 * a * a * a * a + b : -c / 2 * ((a -= 2) * a * a * a - 2) + b
-                }], "ease-in-quint": ["cubic-bezier(0.755, 0.050, 0.855, 0.060)", function (a, b, c, d) {
-                    return c * (a /= d) * a * a * a * a + b
-                }], "ease-out-quint": ["cubic-bezier(0.230, 1, 0.320, 1)", function (a, b, c, d) {
-                    return c * ((a = a / d - 1) * a * a * a * a + 1) + b
-                }], "ease-in-out-quint": ["cubic-bezier(0.860, 0, 0.070, 1)", function (a, b, c, d) {
-                    return (a /= d / 2) < 1 ? c / 2 * a * a * a * a * a + b : c / 2 * ((a -= 2) * a * a * a * a + 2) + b
-                }], "ease-in-sine": ["cubic-bezier(0.470, 0, 0.745, 0.715)", function (a, b, c, d) {
-                    return -c * Math.cos(a / d * (Math.PI / 2)) + c + b
-                }], "ease-out-sine": ["cubic-bezier(0.390, 0.575, 0.565, 1)", function (a, b, c, d) {
-                    return c * Math.sin(a / d * (Math.PI / 2)) + b
-                }], "ease-in-out-sine": ["cubic-bezier(0.445, 0.050, 0.550, 0.950)", function (a, b, c, d) {
-                    return -c / 2 * (Math.cos(Math.PI * a / d) - 1) + b
-                }], "ease-in-expo": ["cubic-bezier(0.950, 0.050, 0.795, 0.035)", function (a, b, c, d) {
-                    return 0 === a ? b : c * Math.pow(2, 10 * (a / d - 1)) + b
-                }], "ease-out-expo": ["cubic-bezier(0.190, 1, 0.220, 1)", function (a, b, c, d) {
-                    return a === d ? b + c : c * (-Math.pow(2, -10 * a / d) + 1) + b
-                }], "ease-in-out-expo": ["cubic-bezier(1, 0, 0, 1)", function (a, b, c, d) {
-                    return 0 === a ? b : a === d ? b + c : (a /= d / 2) < 1 ? c / 2 * Math.pow(2, 10 * (a - 1)) + b : c / 2 * (-Math.pow(2, -10 * --a) + 2) + b
-                }], "ease-in-circ": ["cubic-bezier(0.600, 0.040, 0.980, 0.335)", function (a, b, c, d) {
-                    return -c * (Math.sqrt(1 - (a /= d) * a) - 1) + b
-                }], "ease-out-circ": ["cubic-bezier(0.075, 0.820, 0.165, 1)", function (a, b, c, d) {
-                    return c * Math.sqrt(1 - (a = a / d - 1) * a) + b
-                }], "ease-in-out-circ": ["cubic-bezier(0.785, 0.135, 0.150, 0.860)", function (a, b, c, d) {
-                    return (a /= d / 2) < 1 ? -c / 2 * (Math.sqrt(1 - a * a) - 1) + b : c / 2 * (Math.sqrt(1 - (a -= 2) * a) + 1) + b
-                }], "ease-in-back": ["cubic-bezier(0.600, -0.280, 0.735, 0.045)", function (a, b, c, d, e) {
-                    return void 0 === e && (e = 1.70158), c * (a /= d) * a * ((e + 1) * a - e) + b
-                }], "ease-out-back": ["cubic-bezier(0.175, 0.885, 0.320, 1.275)", function (a, b, c, d, e) {
-                    return void 0 === e && (e = 1.70158), c * ((a = a / d - 1) * a * ((e + 1) * a + e) + 1) + b
-                }], "ease-in-out-back": ["cubic-bezier(0.680, -0.550, 0.265, 1.550)", function (a, b, c, d, e) {
-                    return void 0 === e && (e = 1.70158), (a /= d / 2) < 1 ? c / 2 * a * a * (((e *= 1.525) + 1) * a - e) + b : c / 2 * ((a -= 2) * a * (((e *= 1.525) + 1) * a + e) + 2) + b
-                }]
+                var e = (a /= d) * a, f = e * a;
+                return b + c * (-2.75 * f * e + 11 * e * e + -15.5 * f + 8 * e + .25 * a)
+            }], "ease-in": ["ease-in", function (a, b, c, d) {
+                var e = (a /= d) * a, f = e * a;
+                return b + c * (-1 * f * e + 3 * e * e + -3 * f + 2 * e)
+            }], "ease-out": ["ease-out", function (a, b, c, d) {
+                var e = (a /= d) * a, f = e * a;
+                return b + c * (.3 * f * e + -1.6 * e * e + 2.2 * f + -1.8 * e + 1.9 * a)
+            }], "ease-in-out": ["ease-in-out", function (a, b, c, d) {
+                var e = (a /= d) * a, f = e * a;
+                return b + c * (2 * f * e + -5 * e * e + 2 * f + 2 * e)
+            }], linear: ["linear", function (a, b, c, d) {
+                return c * a / d + b
+            }], "ease-in-quad": ["cubic-bezier(0.550, 0.085, 0.680, 0.530)", function (a, b, c, d) {
+                return c * (a /= d) * a + b
+            }], "ease-out-quad": ["cubic-bezier(0.250, 0.460, 0.450, 0.940)", function (a, b, c, d) {
+                return -c * (a /= d) * (a - 2) + b
+            }], "ease-in-out-quad": ["cubic-bezier(0.455, 0.030, 0.515, 0.955)", function (a, b, c, d) {
+                return (a /= d / 2) < 1 ? c / 2 * a * a + b : -c / 2 * (--a * (a - 2) - 1) + b
+            }], "ease-in-cubic": ["cubic-bezier(0.550, 0.055, 0.675, 0.190)", function (a, b, c, d) {
+                return c * (a /= d) * a * a + b
+            }], "ease-out-cubic": ["cubic-bezier(0.215, 0.610, 0.355, 1)", function (a, b, c, d) {
+                return c * ((a = a / d - 1) * a * a + 1) + b
+            }], "ease-in-out-cubic": ["cubic-bezier(0.645, 0.045, 0.355, 1)", function (a, b, c, d) {
+                return (a /= d / 2) < 1 ? c / 2 * a * a * a + b : c / 2 * ((a -= 2) * a * a + 2) + b
+            }], "ease-in-quart": ["cubic-bezier(0.895, 0.030, 0.685, 0.220)", function (a, b, c, d) {
+                return c * (a /= d) * a * a * a + b
+            }], "ease-out-quart": ["cubic-bezier(0.165, 0.840, 0.440, 1)", function (a, b, c, d) {
+                return -c * ((a = a / d - 1) * a * a * a - 1) + b
+            }], "ease-in-out-quart": ["cubic-bezier(0.770, 0, 0.175, 1)", function (a, b, c, d) {
+                return (a /= d / 2) < 1 ? c / 2 * a * a * a * a + b : -c / 2 * ((a -= 2) * a * a * a - 2) + b
+            }], "ease-in-quint": ["cubic-bezier(0.755, 0.050, 0.855, 0.060)", function (a, b, c, d) {
+                return c * (a /= d) * a * a * a * a + b
+            }], "ease-out-quint": ["cubic-bezier(0.230, 1, 0.320, 1)", function (a, b, c, d) {
+                return c * ((a = a / d - 1) * a * a * a * a + 1) + b
+            }], "ease-in-out-quint": ["cubic-bezier(0.860, 0, 0.070, 1)", function (a, b, c, d) {
+                return (a /= d / 2) < 1 ? c / 2 * a * a * a * a * a + b : c / 2 * ((a -= 2) * a * a * a * a + 2) + b
+            }], "ease-in-sine": ["cubic-bezier(0.470, 0, 0.745, 0.715)", function (a, b, c, d) {
+                return -c * Math.cos(a / d * (Math.PI / 2)) + c + b
+            }], "ease-out-sine": ["cubic-bezier(0.390, 0.575, 0.565, 1)", function (a, b, c, d) {
+                return c * Math.sin(a / d * (Math.PI / 2)) + b
+            }], "ease-in-out-sine": ["cubic-bezier(0.445, 0.050, 0.550, 0.950)", function (a, b, c, d) {
+                return -c / 2 * (Math.cos(Math.PI * a / d) - 1) + b
+            }], "ease-in-expo": ["cubic-bezier(0.950, 0.050, 0.795, 0.035)", function (a, b, c, d) {
+                return 0 === a ? b : c * Math.pow(2, 10 * (a / d - 1)) + b
+            }], "ease-out-expo": ["cubic-bezier(0.190, 1, 0.220, 1)", function (a, b, c, d) {
+                return a === d ? b + c : c * (-Math.pow(2, -10 * a / d) + 1) + b
+            }], "ease-in-out-expo": ["cubic-bezier(1, 0, 0, 1)", function (a, b, c, d) {
+                return 0 === a ? b : a === d ? b + c : (a /= d / 2) < 1 ? c / 2 * Math.pow(2, 10 * (a - 1)) + b : c / 2 * (-Math.pow(2, -10 * --a) + 2) + b
+            }], "ease-in-circ": ["cubic-bezier(0.600, 0.040, 0.980, 0.335)", function (a, b, c, d) {
+                return -c * (Math.sqrt(1 - (a /= d) * a) - 1) + b
+            }], "ease-out-circ": ["cubic-bezier(0.075, 0.820, 0.165, 1)", function (a, b, c, d) {
+                return c * Math.sqrt(1 - (a = a / d - 1) * a) + b
+            }], "ease-in-out-circ": ["cubic-bezier(0.785, 0.135, 0.150, 0.860)", function (a, b, c, d) {
+                return (a /= d / 2) < 1 ? -c / 2 * (Math.sqrt(1 - a * a) - 1) + b : c / 2 * (Math.sqrt(1 - (a -= 2) * a) + 1) + b
+            }], "ease-in-back": ["cubic-bezier(0.600, -0.280, 0.735, 0.045)", function (a, b, c, d, e) {
+                return void 0 === e && (e = 1.70158), c * (a /= d) * a * ((e + 1) * a - e) + b
+            }], "ease-out-back": ["cubic-bezier(0.175, 0.885, 0.320, 1.275)", function (a, b, c, d, e) {
+                return void 0 === e && (e = 1.70158), c * ((a = a / d - 1) * a * ((e + 1) * a + e) + 1) + b
+            }], "ease-in-out-back": ["cubic-bezier(0.680, -0.550, 0.265, 1.550)", function (a, b, c, d, e) {
+                return void 0 === e && (e = 1.70158), (a /= d / 2) < 1 ? c / 2 * a * a * (((e *= 1.525) + 1) * a - e) + b : c / 2 * ((a -= 2) * a * (((e *= 1.525) + 1) * a + e) + 2) + b
+            }]
         }, n = {
             "ease-in-back": "cubic-bezier(0.600, 0, 0.735, 0.045)",
             "ease-out-back": "cubic-bezier(0.175, 0.885, 0.320, 1)",
@@ -767,27 +767,27 @@
 
             // Create quick reference variables for speed access to core prototypes.
             var
-                    push = ArrayProto.push,
-                    slice = ArrayProto.slice,
-                    concat = ArrayProto.concat,
-                    toString = ObjProto.toString,
-                    hasOwnProperty = ObjProto.hasOwnProperty;
+                push = ArrayProto.push,
+                slice = ArrayProto.slice,
+                concat = ArrayProto.concat,
+                toString = ObjProto.toString,
+                hasOwnProperty = ObjProto.hasOwnProperty;
 
             // All **ECMAScript 5** native function implementations that we hope to use
             // are declared here.
             var
-                    nativeForEach = ArrayProto.forEach,
-                    nativeMap = ArrayProto.map,
-                    nativeReduce = ArrayProto.reduce,
-                    nativeReduceRight = ArrayProto.reduceRight,
-                    nativeFilter = ArrayProto.filter,
-                    nativeEvery = ArrayProto.every,
-                    nativeSome = ArrayProto.some,
-                    nativeIndexOf = ArrayProto.indexOf,
-                    nativeLastIndexOf = ArrayProto.lastIndexOf,
-                    nativeIsArray = Array.isArray,
-                    nativeKeys = Object.keys,
-                    nativeBind = FuncProto.bind;
+                nativeForEach = ArrayProto.forEach,
+                nativeMap = ArrayProto.map,
+                nativeReduce = ArrayProto.reduce,
+                nativeReduceRight = ArrayProto.reduceRight,
+                nativeFilter = ArrayProto.filter,
+                nativeEvery = ArrayProto.every,
+                nativeSome = ArrayProto.some,
+                nativeIndexOf = ArrayProto.indexOf,
+                nativeLastIndexOf = ArrayProto.lastIndexOf,
+                nativeIsArray = Array.isArray,
+                nativeKeys = Object.keys,
+                nativeBind = FuncProto.bind;
 
             // Collection Functions
             // --------------------
@@ -1006,8 +1006,8 @@
 
             // A (possibly faster) way to get the current timestamp as an integer.
             _.now = Date.now || function () {
-                return new Date().getTime();
-            };
+                    return new Date().getTime();
+                };
 
             // By default, Underscore uses ERB-style template delimiters, change the
             // following template settings to use alternative delimiters.
@@ -1050,10 +1050,10 @@
 
                 // Combine delimiters into one regular expression via alternation.
                 var matcher = RegExp([
-                    (settings.escape || noMatch).source,
-                    (settings.interpolate || noMatch).source,
-                    (settings.evaluate || noMatch).source
-                ].join('|') + '|$', 'g');
+                        (settings.escape || noMatch).source,
+                        (settings.interpolate || noMatch).source,
+                        (settings.evaluate || noMatch).source
+                    ].join('|') + '|$', 'g');
 
                 // Compile the template source, escaping string literals appropriately.
                 var index = 0;
@@ -1080,8 +1080,8 @@
                     source = 'with(obj||{}){\n' + source + '}\n';
 
                 source = "var __t,__p='',__j=Array.prototype.join," +
-                        "print=function(){__p+=__j.call(arguments,'');};\n" +
-                        source + 'return __p;\n';
+                    "print=function(){__p+=__j.call(arguments,'');};\n" +
+                    source + 'return __p;\n';
 
                 try {
                     var render = new Function(settings.variable || 'obj', '_', source);
@@ -1451,17 +1451,17 @@
 
             function createBadge() {
                 var $brand = $('<a class="w-webflow-badge"></a>')
-                        .attr('href', 'https://webflow.com?utm_campaign=brandjs');
+                    .attr('href', 'https://webflow.com?utm_campaign=brandjs');
 
                 var $logoArt = $('<img>')
-                        .attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-icon.60efbf6ec9.svg')
-                        .css({
-                            marginRight: '8px',
-                            width: '16px',
-                        });
+                    .attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-icon.60efbf6ec9.svg')
+                    .css({
+                        marginRight: '8px',
+                        width: '16px',
+                    });
 
                 var $logoText = $('<img>')
-                        .attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-text.6faa6a38cd.svg');
+                    .attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-text.6faa6a38cd.svg');
 
                 $brand.append($logoArt, $logoText);
                 return $brand[0];
@@ -2528,11 +2528,11 @@
                 }
 
                 tram(
-                        // Focus the lightbox to receive keyboard events.
-                        removeClass($refs.lightbox, 'hide').focus()
-                        )
-                        .add('opacity .3s')
-                        .start({opacity: 1});
+                    // Focus the lightbox to receive keyboard events.
+                    removeClass($refs.lightbox, 'hide').focus()
+                )
+                    .add('opacity .3s')
+                    .start({opacity: 1});
 
                 // Prevent document from scrolling while lightbox is active.
                 addClass($refs.html, 'noscroll');
@@ -2563,31 +2563,31 @@
                 spinner = new Spinner($refs.spinner, prefixed('hide'));
 
                 $refs.content = dom('content')
-                        .append($refs.spinner, $refs.arrowLeft, $refs.arrowRight, $refs.close);
+                    .append($refs.spinner, $refs.arrowLeft, $refs.arrowRight, $refs.close);
 
                 $refs.container = dom('container')
-                        .append($refs.content, $refs.strip);
+                    .append($refs.content, $refs.strip);
 
                 $refs.lightbox = dom('backdrop hide')
-                        .append($refs.container);
+                    .append($refs.container);
 
                 // We are delegating events for performance reasons and also
                 // to not have to reattach handlers when images change.
                 $refs.strip.on('tap', selector('item'), itemTapHandler);
                 $refs.content
-                        .on('swipe', swipeHandler)
-                        .on('tap', selector('left'), handlerPrev)
-                        .on('tap', selector('right'), handlerNext)
-                        .on('tap', selector('close'), handlerHide)
-                        .on('tap', selector('image, caption'), handlerNext);
+                    .on('swipe', swipeHandler)
+                    .on('tap', selector('left'), handlerPrev)
+                    .on('tap', selector('right'), handlerNext)
+                    .on('tap', selector('close'), handlerHide)
+                    .on('tap', selector('image, caption'), handlerNext);
                 $refs.container
-                        .on('tap', selector('view, strip'), handlerHide)
-                        // Prevent images from being dragged around.
-                        .on('dragstart', selector('img'), preventDefault);
+                    .on('tap', selector('view, strip'), handlerHide)
+                    // Prevent images from being dragged around.
+                    .on('dragstart', selector('img'), preventDefault);
                 $refs.lightbox
-                        .on('keydown', keyHandler)
-                        // IE loses focus to inner nodes without letting us know.
-                        .on('focusin', focusThis);
+                    .on('keydown', keyHandler)
+                    // IE loses focus to inner nodes without letting us know.
+                    .on('focusin', focusThis);
 
                 // The `tabindex` attribute is needed to enable non-input elements
                 // to receive keyboard events.
@@ -2680,15 +2680,15 @@
 
                         if ($refs.view) {
                             tram($refs.view)
-                                    .add('opacity .3s')
-                                    .start({opacity: 0})
-                                    .then(remover($refs.view));
+                                .add('opacity .3s')
+                                .start({opacity: 0})
+                                .then(remover($refs.view));
 
                             tram($newView)
-                                    .add('opacity .3s')
-                                    .add('transform .3s')
-                                    .set({x: index > previousIndex ? '80px' : '-80px'})
-                                    .start({opacity: 1, x: 0});
+                                .add('opacity .3s')
+                                .add('transform .3s')
+                                .set({x: index > previousIndex ? '80px' : '-80px'})
+                                .start({opacity: 1, x: 0});
                         } else {
                             $newView.css('opacity', 1);
                         }
@@ -2710,9 +2710,9 @@
              */
             lightbox.hide = function () {
                 tram($refs.lightbox)
-                        .add('opacity .3s')
-                        .start({opacity: 0})
-                        .then(hideLightbox);
+                    .add('opacity .3s')
+                    .start({opacity: 0})
+                    .then(hideLightbox);
 
                 return lightbox;
             };
@@ -2936,51 +2936,51 @@
                     var vh = window.innerHeight;
                     var vw = window.innerWidth;
                     var content =
-                            '.w-lightbox-content, .w-lightbox-view, .w-lightbox-view:before {' +
-                            'height:' + vh + 'px' +
-                            '}' +
-                            '.w-lightbox-view {' +
-                            'width:' + vw + 'px' +
-                            '}' +
-                            '.w-lightbox-group, .w-lightbox-group .w-lightbox-view, .w-lightbox-group .w-lightbox-view:before {' +
-                            'height:' + (0.86 * vh) + 'px' +
-                            '}' +
-                            '.w-lightbox-image {' +
-                            'max-width:' + vw + 'px;' +
-                            'max-height:' + vh + 'px' +
-                            '}' +
-                            '.w-lightbox-group .w-lightbox-image {' +
-                            'max-height:' + (0.86 * vh) + 'px' +
-                            '}' +
-                            '.w-lightbox-strip {' +
-                            'padding: 0 ' + (0.01 * vh) + 'px' +
-                            '}' +
-                            '.w-lightbox-item {' +
-                            'width:' + (0.1 * vh) + 'px;' +
-                            'padding:' + (0.02 * vh) + 'px ' + (0.01 * vh) + 'px' +
-                            '}' +
-                            '.w-lightbox-thumbnail {' +
-                            'height:' + (0.1 * vh) + 'px' +
-                            '}' +
-                            '@media (min-width: 768px) {' +
-                            '.w-lightbox-content, .w-lightbox-view, .w-lightbox-view:before {' +
-                            'height:' + (0.96 * vh) + 'px' +
-                            '}' +
-                            '.w-lightbox-content {' +
-                            'margin-top:' + (0.02 * vh) + 'px' +
-                            '}' +
-                            '.w-lightbox-group, .w-lightbox-group .w-lightbox-view, .w-lightbox-group .w-lightbox-view:before {' +
-                            'height:' + (0.84 * vh) + 'px' +
-                            '}' +
-                            '.w-lightbox-image {' +
-                            'max-width:' + (0.96 * vw) + 'px;' +
-                            'max-height:' + (0.96 * vh) + 'px' +
-                            '}' +
-                            '.w-lightbox-group .w-lightbox-image {' +
-                            'max-width:' + (0.823 * vw) + 'px;' +
-                            'max-height:' + (0.84 * vh) + 'px' +
-                            '}' +
-                            '}';
+                        '.w-lightbox-content, .w-lightbox-view, .w-lightbox-view:before {' +
+                        'height:' + vh + 'px' +
+                        '}' +
+                        '.w-lightbox-view {' +
+                        'width:' + vw + 'px' +
+                        '}' +
+                        '.w-lightbox-group, .w-lightbox-group .w-lightbox-view, .w-lightbox-group .w-lightbox-view:before {' +
+                        'height:' + (0.86 * vh) + 'px' +
+                        '}' +
+                        '.w-lightbox-image {' +
+                        'max-width:' + vw + 'px;' +
+                        'max-height:' + vh + 'px' +
+                        '}' +
+                        '.w-lightbox-group .w-lightbox-image {' +
+                        'max-height:' + (0.86 * vh) + 'px' +
+                        '}' +
+                        '.w-lightbox-strip {' +
+                        'padding: 0 ' + (0.01 * vh) + 'px' +
+                        '}' +
+                        '.w-lightbox-item {' +
+                        'width:' + (0.1 * vh) + 'px;' +
+                        'padding:' + (0.02 * vh) + 'px ' + (0.01 * vh) + 'px' +
+                        '}' +
+                        '.w-lightbox-thumbnail {' +
+                        'height:' + (0.1 * vh) + 'px' +
+                        '}' +
+                        '@media (min-width: 768px) {' +
+                        '.w-lightbox-content, .w-lightbox-view, .w-lightbox-view:before {' +
+                        'height:' + (0.96 * vh) + 'px' +
+                        '}' +
+                        '.w-lightbox-content {' +
+                        'margin-top:' + (0.02 * vh) + 'px' +
+                        '}' +
+                        '.w-lightbox-group, .w-lightbox-group .w-lightbox-view, .w-lightbox-group .w-lightbox-view:before {' +
+                        'height:' + (0.84 * vh) + 'px' +
+                        '}' +
+                        '.w-lightbox-image {' +
+                        'max-width:' + (0.96 * vw) + 'px;' +
+                        'max-height:' + (0.96 * vh) + 'px' +
+                        '}' +
+                        '.w-lightbox-group .w-lightbox-image {' +
+                        'max-width:' + (0.823 * vw) + 'px;' +
+                        'max-height:' + (0.84 * vh) + 'px' +
+                        '}' +
+                        '}';
 
                     styleNode.textContent = content;
                 }
@@ -3051,11 +3051,11 @@
                             data.el.on('setting' + namespace, configure.bind(null, data));
                         } else {
                             data.el
-                                    .on('tap' + namespace, tapHandler(data))
-                                    // Prevent page scrolling to top when clicking on lightbox triggers.
-                                    .on('click' + namespace, function (e) {
-                                        e.preventDefault();
-                                    });
+                                .on('tap' + namespace, tapHandler(data))
+                                // Prevent page scrolling to top when clicking on lightbox triggers.
+                                .on('click' + namespace, function (e) {
+                                    e.preventDefault();
+                                });
                         }
                     });
                 }
@@ -3221,12 +3221,12 @@
                     var height = $section.outerHeight();
                     var offset = viewHeight * 0.5;
                     var active = ($section.is(':visible') &&
-                            top + height - offset >= viewTop &&
-                            top + offset <= viewTop + viewHeight);
+                    top + height - offset >= viewTop &&
+                    top + offset <= viewTop + viewHeight);
                     _.each(anchor.addSec, function (addSec) {
                         if (!active && ($(addSec).is(':visible') &&
-                                $(addSec).offset().top + $(addSec).outerHeight() - offset >= viewTop &&
-                                $(addSec).offset().top + offset <= viewTop + viewHeight)) {
+                            $(addSec).offset().top + $(addSec).outerHeight() - offset >= viewTop &&
+                            $(addSec).offset().top + offset <= viewTop + viewHeight)) {
                             active = true;
                         }
                     });
@@ -3542,8 +3542,8 @@
                 // Over left/right
                 if (config.animOver) {
                     tram(data.menu)
-                            .add(transConfig)
-                            .set({x: config.animDirect * menuWidth, height: bodyHeight}).start({x: 0});
+                        .add(transConfig)
+                        .set({x: config.animDirect * menuWidth, height: bodyHeight}).start({x: 0});
                     data.overlay && data.overlay.width(menuWidth);
                     return;
                 }
@@ -3551,8 +3551,8 @@
                 // Drop Down
                 var offsetY = navHeight + menuHeight;
                 tram(data.menu)
-                        .add(transConfig)
-                        .set({y: -offsetY}).start({y: 0});
+                    .add(transConfig)
+                    .set({y: -offsetY}).start({y: 0});
             }
 
             function setOverlayHeight(data) {
@@ -3594,16 +3594,16 @@
                 // Over left/right
                 if (config.animOver) {
                     tram(data.menu)
-                            .add(transConfig)
-                            .start({x: menuWidth * config.animDirect}).then(complete);
+                        .add(transConfig)
+                        .start({x: menuWidth * config.animDirect}).then(complete);
                     return;
                 }
 
                 // Drop Down
                 var offsetY = navHeight + menuHeight;
                 tram(data.menu)
-                        .add(transConfig)
-                        .start({y: -offsetY}).then(complete);
+                    .add(transConfig)
+                    .start({y: -offsetY}).then(complete);
 
                 function complete() {
                     data.menu.height('');
@@ -3699,11 +3699,11 @@
 
                 // Push new history state
                 if (
-                        loc.hash !== hash &&
-                        history && history.pushState &&
+                    loc.hash !== hash &&
+                    history && history.pushState &&
                         // Navigation breaks Chrome when the protocol is `file:`.
-                        !(Webflow.env.chrome && loc.protocol === 'file:')
-                        ) {
+                    !(Webflow.env.chrome && loc.protocol === 'file:')
+                ) {
                     var oldHash = history.state && history.state.hash;
                     if (oldHash !== hash) {
                         history.pushState({hash: hash}, '', '#' + hash);
@@ -3752,8 +3752,8 @@
 
                 var clock = Date.now();
                 var animate = win.requestAnimationFrame || win.mozRequestAnimationFrame || win.webkitRequestAnimationFrame || function (fn) {
-                    win.setTimeout(fn, 15);
-                };
+                        win.setTimeout(fn, 15);
+                    };
                 var duration = (472.143 * Math.log(Math.abs(start - end) + 125) - 2000) * mult;
 
                 var step = function () {
@@ -4154,28 +4154,28 @@
                     var wait = Math.round(duration - reduced);
                     fadeRule = 'opacity ' + reduced + 'ms ' + easing;
                     tram(prevTargs)
-                            .set({visibility: ''})
-                            .add(fadeRule)
-                            .start({opacity: 0});
+                        .set({visibility: ''})
+                        .add(fadeRule)
+                        .start({opacity: 0});
                     tram(targets)
-                            .set({visibility: '', x: offsetX, opacity: 0, zIndex: data.depth++})
-                            .add(fadeRule)
-                            .wait(wait)
-                            .then({opacity: 1})
-                            .then(resetOthers);
+                        .set({visibility: '', x: offsetX, opacity: 0, zIndex: data.depth++})
+                        .add(fadeRule)
+                        .wait(wait)
+                        .then({opacity: 1})
+                        .then(resetOthers);
                     return;
                 }
 
                 // Fade Over
                 if (animation === 'fade') {
                     tram(prevTargs)
-                            .set({visibility: ''})
-                            .stop();
+                        .set({visibility: ''})
+                        .stop();
                     tram(targets)
-                            .set({visibility: '', x: offsetX, opacity: 0, zIndex: data.depth++})
-                            .add(fadeRule)
-                            .start({opacity: 1})
-                            .then(resetOthers);
+                        .set({visibility: '', x: offsetX, opacity: 0, zIndex: data.depth++})
+                        .add(fadeRule)
+                        .start({opacity: 1})
+                        .then(resetOthers);
                     return;
                 }
 
@@ -4183,26 +4183,26 @@
                 if (animation === 'over') {
                     resetConfig = {x: data.endX};
                     tram(prevTargs)
-                            .set({visibility: ''})
-                            .stop();
+                        .set({visibility: ''})
+                        .stop();
                     tram(targets)
-                            .set({visibility: '', zIndex: data.depth++, x: offsetX + anchors[data.index].width * vector})
-                            .add(slideRule)
-                            .start({x: offsetX})
-                            .then(resetOthers);
+                        .set({visibility: '', zIndex: data.depth++, x: offsetX + anchors[data.index].width * vector})
+                        .add(slideRule)
+                        .start({x: offsetX})
+                        .then(resetOthers);
                     return;
                 }
 
                 // Slide - infinite scroll
                 if (config.infinite && shift.x) {
                     tram(data.slides.not(prevTargs))
-                            .set({visibility: '', x: shift.x})
-                            .add(slideRule)
-                            .start({x: offsetX});
+                        .set({visibility: '', x: shift.x})
+                        .add(slideRule)
+                        .start({x: offsetX});
                     tram(prevTargs)
-                            .set({visibility: '', x: shift.from})
-                            .add(slideRule)
-                            .start({x: shift.to});
+                        .set({visibility: '', x: shift.from})
+                        .add(slideRule)
+                        .start({x: shift.to});
                     data.shifted = prevTargs;
 
                 } else {
@@ -4213,9 +4213,9 @@
 
                     // Slide - basic scroll
                     tram(data.slides)
-                            .set({visibility: ''})
-                            .add(slideRule)
-                            .start({x: offsetX});
+                        .set({visibility: ''})
+                        .add(slideRule)
+                        .start({x: offsetX});
                 }
 
                 // Helper to move others out of view
@@ -4512,9 +4512,9 @@
                 if ($previous.length && config.outro) {
                     $previous.each(ix.outro);
                     tram($previous)
-                            .add('opacity ' + config.outro + 'ms ' + easing, {fallback: safari})
-                            .start({opacity: 0})
-                            .then(intro);
+                        .add('opacity ' + config.outro + 'ms ' + easing, {fallback: safari})
+                        .start({opacity: 0})
+                        .then(intro);
                 } else {
                     // Skip the outro and play intro
                     intro();
@@ -4542,10 +4542,10 @@
 
                     // Otherwise fade in opacity
                     tram($targets)
-                            .set({opacity: 0})
-                            .redraw()
-                            .add('opacity ' + config.intro + 'ms ' + easing, {fallback: safari})
-                            .start({opacity: 1});
+                        .set({opacity: 0})
+                        .redraw()
+                        .add('opacity ' + config.intro + 'ms ' + easing, {fallback: safari})
+                        .start({opacity: 1});
                 }
             }
 
@@ -4700,9 +4700,9 @@
 }());
 
 window.mobileAndTabletcheck = function() {
-  var check = false;
-  (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
-  return check;
+    var check = false;
+    (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
+    return check;
 };
 
 /**
@@ -4716,16 +4716,16 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0, "x": "0px", "y": "50px", "z": "0px"},
             "triggers": [{
-                    "type": "load",
-                    "stepsA": [{
-                            "opacity": 1,
-                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                            "x": "0px",
-                            "y": "0px",
-                            "z": "0px"
-                        }],
-                    "stepsB": []
-                }]
+                "type": "load",
+                "stepsA": [{
+                    "opacity": 1,
+                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                    "x": "0px",
+                    "y": "0px",
+                    "z": "0px"
+                }],
+                "stepsB": []
+            }]
         }
     },
     {
@@ -4734,16 +4734,16 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0},
             "triggers": [{
-                    "type": "load",
-                    "stepsA": [{
-                            "opacity": 1,
-                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                            "x": "0px",
-                            "y": "0px",
-                            "z": "0px"
-                        }],
-                    "stepsB": []
-                }]
+                "type": "load",
+                "stepsA": [{
+                    "opacity": 1,
+                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                    "x": "0px",
+                    "y": "0px",
+                    "z": "0px"
+                }],
+                "stepsB": []
+            }]
         }
     },
     {
@@ -4752,17 +4752,17 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0},
             "triggers": [{
-                    "type": "scroll",
-                    "offsetBot": "20%",
-                    "stepsA": [{"wait": "150ms"}, {
-                            "opacity": 1,
-                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                            "x": "0px",
-                            "y": "0px",
-                            "z": "0px"
-                        }],
-                    "stepsB": []
-                }]
+                "type": "scroll",
+                "offsetBot": "20%",
+                "stepsA": [{"wait": "150ms"}, {
+                    "opacity": 1,
+                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                    "x": "0px",
+                    "y": "0px",
+                    "z": "0px"
+                }],
+                "stepsB": []
+            }]
         }
     },
     {
@@ -4771,18 +4771,18 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0},
             "triggers": [{
-                    "type": "scroll",
-                    "offsetBot": "20%",
-                    "stepsA": [{"wait": "300ms", "transition": "transform 200 ease 0"}, {
-                            "wait": "100ms",
-                            "opacity": 1,
-                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                            "x": "0px",
-                            "y": "0px",
-                            "z": "0px"
-                        }],
-                    "stepsB": []
-                }]
+                "type": "scroll",
+                "offsetBot": "20%",
+                "stepsA": [{"wait": "300ms", "transition": "transform 200 ease 0"}, {
+                    "wait": "100ms",
+                    "opacity": 1,
+                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                    "x": "0px",
+                    "y": "0px",
+                    "z": "0px"
+                }],
+                "stepsB": []
+            }]
         }
     },
     {
@@ -4791,18 +4791,18 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0},
             "triggers": [{
-                    "type": "scroll",
-                    "offsetBot": "20%",
-                    "stepsA": [{"wait": "450ms"}, {
-                            "wait": "200ms",
-                            "opacity": 1,
-                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                            "x": "0px",
-                            "y": "0px",
-                            "z": "0px"
-                        }],
-                    "stepsB": []
-                }]
+                "type": "scroll",
+                "offsetBot": "20%",
+                "stepsA": [{"wait": "450ms"}, {
+                    "wait": "200ms",
+                    "opacity": 1,
+                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                    "x": "0px",
+                    "y": "0px",
+                    "z": "0px"
+                }],
+                "stepsB": []
+            }]
         }
     },
     {
@@ -4811,16 +4811,16 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0, "x": "-50px", "y": "0px", "z": "0px"},
             "triggers": [{
-                    "type": "scroll",
-                    "stepsA": [{
-                            "opacity": 1,
-                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                            "x": "0px",
-                            "y": "0px",
-                            "z": "0px"
-                        }],
-                    "stepsB": []
-                }]
+                "type": "scroll",
+                "stepsA": [{
+                    "opacity": 1,
+                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                    "x": "0px",
+                    "y": "0px",
+                    "z": "0px"
+                }],
+                "stepsB": []
+            }]
         }
     },
     {
@@ -4829,16 +4829,16 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0, "x": "50px", "y": "0px", "z": "0px"},
             "triggers": [{
-                    "type": "scroll",
-                    "stepsA": [{
-                            "opacity": 1,
-                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                            "x": "0px",
-                            "y": "0px",
-                            "z": "0px"
-                        }],
-                    "stepsB": []
-                }]
+                "type": "scroll",
+                "stepsA": [{
+                    "opacity": 1,
+                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                    "x": "0px",
+                    "y": "0px",
+                    "z": "0px"
+                }],
+                "stepsB": []
+            }]
         }
     },
     {
@@ -4847,16 +4847,16 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0, "x": "0px", "y": "-50px", "z": "0px"},
             "triggers": [{
-                    "type": "scroll",
-                    "stepsA": [{
-                            "opacity": 1,
-                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                            "x": "0px",
-                            "y": "0px",
-                            "z": "0px"
-                        }],
-                    "stepsB": []
-                }]
+                "type": "scroll",
+                "stepsA": [{
+                    "opacity": 1,
+                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                    "x": "0px",
+                    "y": "0px",
+                    "z": "0px"
+                }],
+                "stepsB": []
+            }]
         }
     },
     {
@@ -4865,17 +4865,17 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0, "x": "0px", "y": "50px", "z": "0px"},
             "triggers": [{
-                    "type": "scroll",
-                    "offsetBot": "20%",
-                    "stepsA": [{
-                            "opacity": 1,
-                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                            "x": "0px",
-                            "y": "0px",
-                            "z": "0px"
-                        }],
-                    "stepsB": []
-                }]
+                "type": "scroll",
+                "offsetBot": "20%",
+                "stepsA": [{
+                    "opacity": 1,
+                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                    "x": "0px",
+                    "y": "0px",
+                    "z": "0px"
+                }],
+                "stepsB": []
+            }]
         }
     },
     {
@@ -4884,17 +4884,17 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0, "x": "0px", "y": "50px", "z": "0px"},
             "triggers": [{
-                    "type": "scroll",
-                    "offsetBot": "20%",
-                    "stepsA": [{"wait": "300ms"}, {
-                            "opacity": 1,
-                            "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
-                            "x": "0px",
-                            "y": "0px",
-                            "z": "0px"
-                        }],
-                    "stepsB": []
-                }]
+                "type": "scroll",
+                "offsetBot": "20%",
+                "stepsA": [{"wait": "300ms"}, {
+                    "opacity": 1,
+                    "transition": "transform 1000ms ease 0ms, opacity 1000ms ease 0ms",
+                    "x": "0px",
+                    "y": "0px",
+                    "z": "0px"
+                }],
+                "stepsB": []
+            }]
         }
     },
     {
@@ -4903,16 +4903,16 @@ Webflow.require('ix').init([
         "value": {
             "style": {"opacity": 0, "scaleX": 0.6000000000000003, "scaleY": 0.6000000000000003, "scaleZ": 1},
             "triggers": [{
-                    "type": "scroll",
-                    "stepsA": [{
-                            "opacity": 1,
-                            "transition": "transform 600ms ease 0ms, opacity 600ms ease 0ms",
-                            "scaleX": 1.08,
-                            "scaleY": 1.08,
-                            "scaleZ": 1
-                        }, {"transition": "transform 150ms ease-out-cubic 0ms", "scaleX": 1, "scaleY": 1, "scaleZ": 1}],
-                    "stepsB": []
-                }]
+                "type": "scroll",
+                "stepsA": [{
+                    "opacity": 1,
+                    "transition": "transform 600ms ease 0ms, opacity 600ms ease 0ms",
+                    "scaleX": 1.08,
+                    "scaleY": 1.08,
+                    "scaleZ": 1
+                }, {"transition": "transform 150ms ease-out-cubic 0ms", "scaleX": 1, "scaleY": 1, "scaleZ": 1}],
+                "stepsB": []
+            }]
         }
     }
 ]);
@@ -5069,7 +5069,7 @@ function resizeWin() {
     });
 
     /*var scrollBlock = $('.bck-table')[0];
-     
+
      if(scrollBlock.clientWidth != scrollBlock.scrollWidth)
      {
      if(!$('.bck-table').hasClass('scrollsecond'))
