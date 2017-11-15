@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $apiKey = 'b9a7e18ebe59d9d3d8e741a20e01d305c6f96f5a';
         $fromEmail = 'partners@freedcoin.io';
-        $toEmail = 'alex_v2008@mail.ru';
+        $toEmail = $fromEmail;
 
         $postData = $_POST;
 
