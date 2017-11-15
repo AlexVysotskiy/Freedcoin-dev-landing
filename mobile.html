@@ -7,8 +7,8 @@
         <link href="css/normalize.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="css/mobile/owl.carousel.min.css">
         <link rel="stylesheet" href="css/mobile/owl.theme.default.min.css">
-        <link href="css/mobile/webflow.css" rel="stylesheet" type="text/css">
-        <link href="css/mobile/freed-0e0411.webflow.css" rel="stylesheet" type="text/css">
+        <link href="css/mobile/webflow.css?v=1" rel="stylesheet" type="text/css">
+        <link href="css/mobile/freed-0e0411.webflow.css?v=1" rel="stylesheet" type="text/css">
         <link href="css/mobile/jquery.fullpage.min.css" rel="stylesheet" type="text/css">
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="css/jquery.countdown.css" rel="stylesheet" type="text/css"/>
@@ -30,7 +30,9 @@
         <script type="text/javascript" src="js/scrolloverflow.min.js"></script>
 
         <script type="text/javascript">
+
             $(document).ready(function () {
+
 
                 $(window).scroll(function () {
                     if ($(this).scrollTop() > 100) {
@@ -510,10 +512,16 @@
         <script type="text/javascript" src="js/nav.js"></script>
         <script type="text/javascript" src="js/jquery.countdown.js"></script>
         <script type="text/javascript" src="js/coins_config.js"></script>
-        <script type="text/javascript" src="js/webflow.js"></script>
+        <script type="text/javascript" src="js/webflow.js?v=1"></script>
         <script src="js/owl.carousel.min.js"></script>
 
         <script>
+
+                        if (!window.mobileAndTabletcheck())
+                        {
+                            window.location = '/';
+                        }
+
                         $(document).ready(function () {
                             $('.owl-carousel').owlCarousel({
                                 loop: true,
